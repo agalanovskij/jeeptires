@@ -93,6 +93,10 @@ a {
 		}
 	}
 
+	&--content {
+		padding-top: 28px;
+	}
+
 }
 
 .l-row {
@@ -131,6 +135,10 @@ a {
 	&__full {
 		padding: 0 10px;
 		clear: both;
+
+		@media all and (max-width: @mq-small) {
+			padding: 0;
+		}
 	}
 }
 
@@ -589,7 +597,7 @@ a {
 					}
 				}
 
-				&:hover {
+				&:hover, &.js-hover {
 
 					&:after {
 						border-top-color: @color-hover;
@@ -655,6 +663,8 @@ a {
 		box-sizing: border-box;
 		background: @bg-light;
 		border: solid #e2e2e2;
+		padding: 18px 20px;
+		padding-right: 145px;
 		border-width: 0 1px 1px;
 		line-height: normal;
 		position: absolute;
@@ -664,7 +674,7 @@ a {
 		box-shadow: 0 22px 48px rgba(0, 0, 0, .53);
 		z-index: -1;
 		.animate-hidden;
-		.move-y(-25%);
+		// .move-y(-10px);
 		.transition;
 
 		@media all and (max-width: @mq-small) {
@@ -680,7 +690,34 @@ a {
 			box-shadow: 0 1px 28px rgba(0, 0, 0, .4);
 		}
 
-	}
+		&__showall {
+			display: inline-block;
+			color: #004b8e;
+		}
+
+		.b-seasons {
+			margin-bottom: 30px;
+			margin-top: -6px;
+
+			&__item {
+				font-size: 16px;
+				height: 47px;
+				line-height: 47px;
+				text-align: left;
+				padding-left: 110px;
+
+				img {
+					height: 63px;
+					left: 2px;
+				}
+			}
+		}
+
+		.b-brands-list {
+			margin-bottom: 35px;
+		}
+
+	} // &__submenu
 
 	&__calc {
 		float: right;
@@ -858,7 +895,13 @@ a {
 			font-size: 20px;
 			color: #004b8e;
 			position: absolute;
+			top: 0;
 			right: 23px;
+			display: none;
+
+			@media all and (max-width: @mq-small) {
+				display: block;
+			}
 		}
 
 		&.active {
@@ -878,7 +921,7 @@ a {
 		padding-bottom: 36px;
 		background: url('@{img-path}/calc1.jpg') 28px 13px no-repeat;
 		border-bottom: 1px solid #c2c2c2;
-		overflow: hidden;
+		// overflow: hidden;
 
 		&.visible {
 			display: block;
@@ -1488,6 +1531,16 @@ a {
 
 } // .b-heading
 
+.b-subheading {
+	font-weight: 400;
+	letter-spacing: @letter-spacing-plus;
+
+	&--h5 {
+		font-size: 16px;
+		margin-bottom: 22px;
+	}
+}
+
 .b-catalog {
 
 	&--wheels {
@@ -1969,7 +2022,177 @@ a {
 		color: #004b8e;
 	}
 
+	&__blue {
+		color: #004b8e;
+	}
+
 } // .b-article
+
+// Breadcrumbs
+.b-breadcrumbs {
+	font-size: 12px;
+	color: #8c8c8c;
+
+	&__item {
+		display: inline-block;
+
+		&:after {
+			content: ' — ';
+		}
+
+		&:last-child {
+			&:after {
+				content: '';
+			}
+		}
+
+	}
+
+	+ .b-heading {
+		margin-top: 20px;
+	}
+
+} // .b-breadcrumbs
+
+.b-seasons {
+	margin-top: -12px;
+	margin-bottom: 10px;
+
+	&__item {
+		height: 74px;
+		background: #fff;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 700;
+		position: relative;
+		line-height: 74px;
+		padding-left: 130px;
+		text-align: center;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, .13);
+		margin-top: 28px;
+		.transition;
+
+		&:hover {
+			background-color: #fed100;
+		}
+
+		img {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		a {
+			display: block;
+			height: 100%;
+		}
+
+		&--summer {
+			img {
+				left: -6px;
+			}
+		}
+
+		&--winter {
+			img {
+				left: 4px;
+			}
+		}
+
+		&--at {
+			img {
+				left: 11px;
+			}
+		}
+
+		&--mt {
+			img {
+				left: 7px;
+			}
+		}
+
+	} // &__item
+
+} // .b-seasons
+
+.b-brands {
+
+	&__item {
+		color: #004b8e;
+		margin-bottom: 35px;
+
+		u {
+			border-bottom-color: transparent;
+		}
+
+		&:hover {
+			u {
+				border-bottom: 1px solid;
+			}
+		}
+	}
+
+	&__pic {
+		height: 82px;
+		overflow: hidden;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, .13);
+		position: relative;
+		margin-bottom: 9px;
+
+		img {
+			width: 100%;
+			position: absolute;
+			top: -9999px;
+			bottom: -9999px;
+			margin: auto;
+		}
+	}
+
+	@media (max-width: @mq-mobile) {
+		.col-brands-12 {
+			width: 100%;
+		}
+	}
+
+} // .b-brands
+
+.b-brands-list {
+	margin-top: 7px;
+	letter-spacing: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 8px;
+		color: #004b8e;
+		border-right: 1px solid #e1e1e1;
+		margin-bottom: 4px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			border-right: 0;
+		}
+
+		a {
+			color: #004b8e;
+				u {
+					border-color: transparent;
+				}
+
+			&:hover {
+				u {
+					border-bottom: 1px solid;
+				}
+			}
+		}
+
+	}
+
+} // .b-brands-list
 
 // Footer
 .b-footer {
