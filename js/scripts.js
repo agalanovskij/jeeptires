@@ -148,8 +148,8 @@ $(document).ready(function(){
 	$('.js-window-call').magnificPopup({
 		midClick: true,
 		overflowY: 'scroll',
-		// removalDelay: 300,
-		// mainClass: 'mfp-anim'
+		removalDelay: 300,
+		mainClass: 'mfp-anim'
 	});
 
 	$(window).on('resize', function(){

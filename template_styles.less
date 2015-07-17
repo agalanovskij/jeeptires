@@ -2416,3 +2416,66 @@ a {
 	}
 
 } // .b-form
+
+// windows animations
+.mfp-anim {
+
+	&.mfp-bg {
+		opacity: 0;
+		.transition(all, 0.3s, ease);
+
+		&.mfp-ready { opacity: 1; }
+		&.mfp-removing { opacity: 0; }
+	}
+
+	&.mfp-wrap {
+
+		.b-window {
+			.move-y(50px);
+			opacity: 0;
+			.transition(all, 0.3s, ease);
+
+			&__title span, &__content {
+				.move-y(25px);
+				opacity: 0;
+				.transition(all, 0.3s, ease);
+			}
+			
+		}
+
+		&.mfp-ready {
+
+			.b-window {
+				.move-y(0);
+				opacity: 1;
+
+				&__title span, &__content {
+					.move-y(0);
+					opacity: 1;
+				}
+
+				&__content {
+					.transition-delay(0.1s);
+				}
+			}
+
+		}
+
+		&.mfp-removing {
+
+			.b-window {
+				.move-y(50px);
+				opacity: 0;
+
+				&__title span, &__content {
+					.move-y(25px);
+					opacity: 0;
+				}
+
+			}
+
+		}
+
+	} // &.mfp-wrap
+
+} // .mfp-anim
