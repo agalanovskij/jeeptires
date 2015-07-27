@@ -3117,7 +3117,279 @@ a {
 
 	}
 
-}
+} // .b-service
+
+.b-cart {
+
+	&__tabs {
+		border-bottom: 1px solid #f0f0f0;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		@media all and (max-width: @mq-small) {
+			font-size: 14px;
+		}
+	}
+
+	&__tab {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 45px;
+		margin-bottom: -1px;
+
+		@media all and (max-width: @mq-small) {
+			margin-right: 30px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.active {
+			color: @color-blue;
+			border-bottom: 1px solid @color-blue;
+		}
+
+		a {
+			display: block;
+			padding-bottom: 25px;
+
+			@media all and (max-width: @mq-small) {
+				padding-bottom: 12px;
+			}
+		}
+	}
+
+	&__table {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		margin-bottom: 25px;
+
+		@media all and (max-width: @mq-medium) {
+			display: block;
+		}
+	}
+
+	&__row {
+		display: table-row;
+
+		@media all and (max-width: @mq-medium) {
+			display: block;
+			border-bottom: 1px solid @color-blue;
+
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+
+	&__cell {
+		display: table-cell;
+		vertical-align: middle;
+		border-bottom: 1px solid #f0f0f0;
+		padding: 15px 0;
+		text-align: center;
+
+		@media all and (max-width: @mq-medium) {
+			display: inline-block;
+			border-bottom: 0;
+
+			.b-cart-spinner {
+				margin-right: 10px;
+			}
+		}
+
+		&:first-child {
+			text-align: left;
+			width: 350px;
+
+			@media all and (max-width: @mq-medium) {
+				display: block;
+				width: auto;
+				border-bottom: 1px solid #f0f0f0;
+			}
+		}
+
+		&:last-child {
+			width: 112px;
+			padding-left: 35px;
+			text-align: left;
+
+			@media all and (max-width: @mq-medium) {
+				display: block;
+				width: auto;
+				padding: 7px 0 9px;
+				border-top: 1px solid #f0f0f0;
+			}
+		}
+
+		&--top {
+			font-size: 12px;
+			color: #6b6b6b;
+			padding: 9px 0;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		color: @color-blue;
+
+		a {
+			display: table;
+		}
+
+		img {
+			display: table-cell;
+			width: 74px;
+			vertical-align: middle;
+			margin-right: 32px;
+		}
+
+		span {
+			display: table-cell;
+			vertical-align: middle;
+			line-height: 23px;
+		}
+	}
+
+	&__price {
+		font-size: 18px;
+		color: #1c1c1c;
+
+		@media all and (max-width: @mq-medium) {
+			font-size: 17px;
+			font-weight: 700;
+
+			strong {
+				color: @color-blue;
+			}
+
+			&--single {
+				margin-right: 9px;
+				
+				&:after {
+					content: 'X';
+					font-size: 11.2px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: 13px;
+				}
+			}
+
+			&--total {
+				
+				&:before {
+					content: '=';
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 6px;
+					color: @color-blue;
+				}
+			}
+		}
+
+	} // &__price
+
+	&__action {
+		display: block;
+		height: 35px;
+		font-size: 12px;
+		line-height: 35px;
+		color: @color-blue;
+		text-align: center;
+		letter-spacing: 0.05em;
+		border: 1px solid transparent;
+		margin-bottom: 8px;
+		.transition;
+
+		@media all and (max-width: @mq-medium) {
+			display: inline-block;
+			width: 110px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--remove {
+			border-color: #e2e2e2;
+		}
+
+		&:hover {
+			background: #f6f6f6;
+		}
+	}
+
+	&__finish {
+		float: right;
+
+		@media all and (max-width: @mq-small) {
+			float: left;
+		}
+
+		.b-calc__submit {
+			width: 100%;
+		}
+	}
+
+	&__total {
+		font-size: 18px;
+		color: #000;
+		margin-bottom: 20px;
+
+		strong {
+			font-size: 22px;
+			color: @color-blue;
+		}
+	}
+
+} // .b-cart
+
+.b-cart-spinner {
+	font-size: 14px;
+	color: #1c1c1c;
+	text-align: center;
+
+	&__field {
+		width: 46px;
+		height: 30px;
+		border: 1px solid #dfdfdf;
+		text-align: center;
+		font-size: 14px;
+		color: #1c1c1c;
+
+		@media all and (max-width: @mq-small) {
+			width: 30px;
+			height: 24px;
+			font-size: 11px;
+		}
+	}
+
+	&__control {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		line-height: 28px;
+		background: #f6f6f6;
+		border: 1px solid #dfdfdf;
+		.transition;
+
+		@media all and (max-width: @mq-small) {
+			width: 24px;
+			height: 24px;
+			line-height: 22px;
+			font-size: 11px;
+		}
+
+		&:hover {
+			background: darken(#f6f6f6, 5%);
+		}
+	}
+
+} // .b-cart-spinner
 
 // Breadcrumbs
 .b-breadcrumbs {

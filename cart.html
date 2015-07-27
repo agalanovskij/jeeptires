@@ -1,0 +1,661 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Корзина — Jeeptires</title>
+
+	<link rel="shortcut icon" href="favicon.png">
+	
+	<!-- Reset styles -->
+	<link rel="stylesheet" href="css/normalize.css"> 
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/bootstrap-grid-12.css"> 
+	<link rel="stylesheet" href="css/icons.css">
+
+	<!-- Plugins' styles -->
+	<link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
+	<link rel="stylesheet" href="js/vendor/magnific-popup/magnific-popup.min.css">
+
+	<!-- Main styles -->
+	<link rel="stylesheet" href="template_styles.css">
+
+	<!--[if lt IE 10]><script src="js/IE9.js"></script><![endif]-->
+	
+	<!-- Scripts -->
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<script src="js/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<script src="js/vendor/jquery-maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="js/vendor/swiper/swiper.jquery.min.js"></script>
+	<script src="js/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/vendor/select-or-die/selectordie.min.js"></script>
+	<script src="js/vendor/tabby/classList.min.js"></script>
+	<script src="js/vendor/tabby/tabby.min.js"></script>
+	<script src="js/vendor/jquery-spinner/jquery.spinner.min.js"></script>
+	<script src="js/vendor/jquery-validation/jquery.validate.min.js"></script>
+	<script src="js/vendor/jquery-validation/localization/messages_ru.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+	<div class="l-page">
+
+		<header class="b-header">
+
+			<div class="b-header__top">
+
+				<div class="b-header__btn b-header__btn--burger js-header__btn" data-show="js-header__nav"><span></span></div>
+				<div class="b-header__btn b-header__btn--call js-header__btn" data-show="js-window-call"></div>
+
+				<div class="l-container">
+
+					<nav class="b-header__nav js-show" id="js-header__nav">
+						<ul>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>О нас</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Доставка и оплата</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Гарантии</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Скидки</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Бренды</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Шины в кредит</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Контакты</u></a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="b-header__address">
+						г. Хабаровск, ул. Иркутская 6, офис №105
+					</div><!-- .b-header__address -->
+
+				</div><!-- .l-container -->
+
+				<div class="b-window mfp-hide b-header__window js-show" id="js-window-call">
+
+					<div class="b-window__title">
+						<span>Заказать обратный звонок</span>
+					</div>
+
+					<div class="b-window__content">
+
+						<form class="b-form b-form--window">
+
+							<label class="b-form__label">
+								<span class="b-form__label__name">Как к вам обращаться?</span>
+								<input class="b-form__label__field" type="text">
+							</label>
+
+							<label class="b-form__label">
+								<span class="b-form__label__name">Ваш номер телефона</span>
+								<input class="b-form__label__field" type="tel">
+							</label>
+
+							<div class="b-form__end">
+								<input class="b-form__submit" type="submit" value="Я жду звонка">
+							</div>
+
+						</form>
+
+					</div><!-- .b-window__content -->
+
+				</div><!-- .js-window -->
+
+			</div><!-- .b-header__top -->
+
+			<div class="l-container">
+
+				<div class="b-header__middle">
+
+					<div class="b-header__middle__cell">
+
+						<a class="b-header__logo" href="/"></a>
+
+						<div class="b-header__motto">
+							Онлайн-магазин автомобильных <br> шин и дисков
+						</div>
+
+					</div><!-- .b-header__middle__cell -->
+
+					<div class="b-header__middle__cell">
+
+						<div class="b-header__phone">
+							<div class="b-header__phone__number">+7 (4212) 62-88-00</div>
+							<a class="b-header__phone__link js-window-call" href="#js-window-call"><u>Заказать обратный звонок</u></a>
+						</div>
+
+					</div><!-- .b-header__middle__cell -->
+
+					<div class="b-header__middle__cell">
+
+						<a class="b-header__cart" href="#">
+							12 единиц – <span>12 200 руб</span>
+						</a>
+
+					</div><!-- .b-header__middle__cell -->
+
+				</div><!-- .b-header__middle -->
+
+			</div><!-- .l-container -->
+
+			<div class="b-header__bottom">
+
+				<div class="l-container">
+
+					<div class="b-header__menu-toggle js-toggle" data-show="js-header__menu">Меню</div>
+					
+					<div class="b-header__menu" id="js-header__menu">
+
+						<ul>
+							<li class="b-header__menu__item b-header__menu__item--sub">
+								<a class="b-header__menu__link" href="#">Каталог автошин</a>
+
+								<div class="b-header__submenu">
+
+									Выбирайте шины под сезон:
+									
+									<div class="b-seasons row">
+
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--summer">
+												<a href="#">
+													<img src="img/season-summer.png" alt="">
+													Летние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--winter">
+												<a href="#">
+													<img src="img/season-winter.png" alt="">
+													Зимние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--at">
+												<a href="#"><img src="img/season-at.png" alt="">
+													All Terrain
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--mt">
+												<a href="#">
+													<img src="img/season-mt.png" alt="">
+													Грязевые
+												</a>
+											</div>
+
+										</div>
+
+									</div><!-- .b-seasons -->
+
+									<div class="b-brands-list">
+										Либо выбирайте шины своего любимого бренда:
+										<ul>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+										</ul>
+									</div><!-- .b-brands-list -->
+
+									<a class="b-header__submenu__showall" href="#"><u>Показать все</u></a>
+
+								</div><!-- .b-header__submenu -->
+
+							</li>
+							<li class="b-header__menu__item b-header__menu__item--sub">
+								<a class="b-header__menu__link" href="#">Каталог дисков</a>
+
+								<div class="b-header__submenu">
+
+									Выбирайте шины под сезон:
+									
+									<div class="b-seasons row">
+
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--summer">
+												<a href="#">
+													<img src="img/season-summer.png" alt="">
+													Летние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--winter">
+												<a href="#">
+													<img src="img/season-winter.png" alt="">
+													Зимние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--at">
+												<a href="#"><img src="img/season-at.png" alt="">
+													All Terrain
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--mt">
+												<a href="#">
+													<img src="img/season-mt.png" alt="">
+													Грязевые
+												</a>
+											</div>
+
+										</div>
+
+									</div><!-- .b-seasons -->
+
+									<div class="b-brands-list">
+										Либо выбирайте шины своего любимого бренда:
+										<ul>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+										</ul>
+									</div><!-- .b-brands-list -->
+
+									<a class="b-header__submenu__showall" href="#"><u>Показать все</u></a>
+
+								</div><!-- .b-header__submenu -->
+
+							</li>
+							<li class="b-header__menu__item">
+								<a class="b-header__menu__link" href="#">Шиномонтаж</a>
+							</li>
+							<li class="b-header__menu__item">
+								<a class="b-header__menu__link" href="#">Хранение</a>
+							</li>
+						</ul>
+					</div><!-- .b-header__menu -->
+
+					<a class="b-header__calc b-header__menu__link" href="#">Шинный калькулятор</a>
+
+				</div><!-- .l-container -->
+
+			</div><!-- .b-header__bottom -->
+
+		</header><!-- .b-header -->
+
+		<div class="l-container l-container--content l-container--notwide">
+
+			<div class="b-breadcrumbs">
+
+				<ul>
+					<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
+					<li class="b-breadcrumbs__item">Корзина</li>
+				</ul>
+
+			</div><!-- .b-breadcrumbs -->
+
+			<h2 class="b-heading b-heading--h2">Корзина</h2>
+
+			<div class="b-cart">
+
+				<ul class="b-cart__tabs">
+					<li class="b-cart__tab active"><a data-tab="#js-cart-ready" href="#">Готовые к заказу</a></li>
+					<li class="b-cart__tab"><a data-tab="#js-cart-waiting" href="#">Отложенные</a></li>
+				</ul><!-- .b-cart__tabs -->
+
+				<div class="tabs-content">
+
+					<div class="tabs-pane active" id="js-cart-ready">
+						
+						<div class="b-cart__table">
+
+							<div class="b-cart__row">
+								<div class="b-cart__cell b-cart__cell--top">Товар</div>
+								<div class="b-cart__cell b-cart__cell--top">Цена</div>
+								<div class="b-cart__cell b-cart__cell--top">Количество</div>
+								<div class="b-cart__cell b-cart__cell--top">Сумма</div>
+								<div class="b-cart__cell b-cart__cell--top"></div>
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<img src="img/tmp/t1.jpg" alt="">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+								<div class="b-cart__cell">
+
+									<span class="b-cart-spinner" data-trigger="spinner">
+										<a class="b-cart-spinner__control b-cart-spinner__control--down" href="javascript:;" data-spin="down">-</a>
+										<input class="b-cart-spinner__field" type="text" value="4" data-rule="quantity">
+										<a class="b-cart-spinner__control b-cart-spinner__control--up" href="javascript:;" data-spin="up">+</a>
+									</span>
+
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+								<div class="b-cart__cell">
+									<a class="b-cart__action b-cart__action--remove" href="#">Удалить</a>
+									<a class="b-cart__action" href="#">Отложить</a>
+								</div>
+
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<img src="img/tmp/t1.jpg" alt="">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+								<div class="b-cart__cell">
+
+									<span class="b-cart-spinner" data-trigger="spinner">
+										<a class="b-cart-spinner__control b-cart-spinner__control--down" href="javascript:;" data-spin="down">-</a>
+										<input class="b-cart-spinner__field" type="text" value="4" data-rule="quantity">
+										<a class="b-cart-spinner__control b-cart-spinner__control--up" href="javascript:;" data-spin="up">+</a>
+									</span>
+
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+								<div class="b-cart__cell">
+									<a class="b-cart__action b-cart__action--remove" href="#">Удалить</a>
+									<a class="b-cart__action" href="#">Отложить</a>
+								</div>
+
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<img src="img/tmp/t1.jpg" alt="">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+								<div class="b-cart__cell">
+
+									<span class="b-cart-spinner" data-trigger="spinner">
+										<a class="b-cart-spinner__control b-cart-spinner__control--down" href="javascript:;" data-spin="down">-</a>
+										<input class="b-cart-spinner__field" type="text" value="4" data-rule="quantity">
+										<a class="b-cart-spinner__control b-cart-spinner__control--up" href="javascript:;" data-spin="up">+</a>
+									</span>
+
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+								<div class="b-cart__cell">
+									<a class="b-cart__action b-cart__action--remove" href="#">Удалить</a>
+									<a class="b-cart__action" href="#">Отложить</a>
+								</div>
+
+							</div><!-- .b-cart__row -->
+
+						</div><!-- .b-cart__table -->
+
+					</div><!-- .tabs-pane -->
+
+					<div class="tabs-pane" id="js-cart-waiting">
+						
+						<div class="b-cart__table">
+
+							<div class="b-cart__row">
+								<div class="b-cart__cell b-cart__cell--top">Товар</div>
+								<div class="b-cart__cell b-cart__cell--top">Цена</div>
+								<div class="b-cart__cell b-cart__cell--top">Количество</div>
+								<div class="b-cart__cell b-cart__cell--top">Сумма</div>
+								<div class="b-cart__cell b-cart__cell--top"></div>
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<img src="img/tmp/t1.jpg" alt="">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+								<div class="b-cart__cell">
+
+									<span class="b-cart-spinner" data-trigger="spinner">
+										<a class="b-cart-spinner__control b-cart-spinner__control--down" href="javascript:;" data-spin="down">-</a>
+										<input class="b-cart-spinner__field" type="text" value="4" data-rule="quantity">
+										<a class="b-cart-spinner__control b-cart-spinner__control--up" href="javascript:;" data-spin="up">+</a>
+									</span>
+
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+								<div class="b-cart__cell">
+									<a class="b-cart__action b-cart__action--remove" href="#">Удалить</a>
+									<a class="b-cart__action" href="#">Отложить</a>
+								</div>
+
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<img src="img/tmp/t1.jpg" alt="">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+								<div class="b-cart__cell">
+
+									<span class="b-cart-spinner" data-trigger="spinner">
+										<a class="b-cart-spinner__control b-cart-spinner__control--down" href="javascript:;" data-spin="down">-</a>
+										<input class="b-cart-spinner__field" type="text" value="4" data-rule="quantity">
+										<a class="b-cart-spinner__control b-cart-spinner__control--up" href="javascript:;" data-spin="up">+</a>
+									</span>
+
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+								<div class="b-cart__cell">
+									<a class="b-cart__action b-cart__action--remove" href="#">Удалить</a>
+									<a class="b-cart__action" href="#">Отложить</a>
+								</div>
+
+							</div><!-- .b-cart__row -->
+
+						</div><!-- .b-cart__table -->
+
+					</div><!-- .tabs-pane -->
+
+				</div><!-- .tabs-content -->
+
+				<div class="b-cart__finish">
+
+					<div class="b-cart__total">
+						Товаров на: <strong>9 300 ₽</strong>
+					</div>
+
+					<button class="b-calc__submit" type="button">
+						Оформить заказ 
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+							<polygon points="0,0 9,19 0,37"/>
+						</svg>
+					</button>
+					
+				</div><!-- .b-cart__finish -->
+
+			</div><!-- .b-cart -->
+
+		</div><!-- .l-container -->
+		
+	</div><!-- .l-page -->
+
+	<footer class="b-footer">
+
+		<div class="l-container">
+
+			<div class="b-footer__nav">
+				<ul>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>Бренды</u></a>
+					</li>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>Доставка и оплата</u></a>
+					</li>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>Гарантии</u></a>
+					</li>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>Скидки</u></a>
+					</li>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>О нас</u></a>
+					</li>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>Новости компании</u></a>
+					</li>
+					<li class="b-footer__nav__item">
+						<a class="b-footer__nav__link" href="#"><u>Контакты</u></a>
+					</li>
+				</ul>
+			</div><!-- .b-footer__nav -->
+
+			<div class="b-footer__menu">
+				<ul>
+					<li class="b-footer__menu__item">
+						<a class="b-footer__menu__link" href="#">Каталог автошин</a>
+					</li>
+					<li class="b-footer__menu__item">
+						<a class="b-footer__menu__link" href="#">Каталог дисков</a>
+					</li>
+					<li class="b-footer__menu__item">
+						<a class="b-footer__menu__link" href="#">Шиномонтаж</a>
+					</li>
+					<li class="b-footer__menu__item">
+						<a class="b-footer__menu__link" href="#">Шинный калькулятор</a>
+					</li>
+				</ul>
+			</div><!-- .b-footer__menu -->
+
+			<div class="b-footer__phone">
+
+				<div class="b-footer__phone__number">
+					+7 (4212) 62-88-00
+				</div>
+
+				<div class="b-footer__copyright">
+					© ИП Фуфаев И.С.
+				</div>
+
+			</div><!-- .b-footer__phone -->
+
+			<div class="b-footer__contacts">
+				г. Хабаровск, ул. Иркутская 6, офис №105 <br>
+				E-mail: <a href="mailto:info@jeeptires.ru">info@jeeptires.ru</a> <br>
+				Skype: Jeeptires
+
+				<div class="b-footer__madeby">
+					<a href="#"><u>Разработка сайта</u></a> — Веб-студия «Факт»
+				</div>
+
+			</div><!-- .b-footer__contacts -->
+			
+		</div><!-- .l-container -->
+
+	</footer><!-- .b-footer -->
+
+</body>
+
+</html>
