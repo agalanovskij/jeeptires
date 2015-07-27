@@ -74,6 +74,10 @@ a {
 		.clear;
 	}
 
+	&--notwide {
+		max-width: 1180px;
+	}
+
 	@media all and (max-width: @max-width) {
 		max-width: @mq-large;
 	}
@@ -96,12 +100,12 @@ a {
 		}
 	}
 
-	&--content {
-		padding-top: 18px;
-	}
-
 	&--about {
 		max-width: 940px;
+	}
+
+	&--content {
+		padding-top: 18px;
 	}
 
 }

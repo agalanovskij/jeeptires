@@ -33,6 +33,9 @@ a:hover u {
   display: block;
   clear: both;
 }
+.l-container--notwide {
+  max-width: 1180px;
+}
 @media all and (max-width: 1420px) {
   .l-container {
     max-width: 1200px;
@@ -58,11 +61,11 @@ a:hover u {
     padding: 0;
   }
 }
-.l-container--content {
-  padding-top: 18px;
-}
 .l-container--about {
   max-width: 940px;
+}
+.l-container--content {
+  padding-top: 18px;
 }
 .l-row {
   margin: 0 -10px;
