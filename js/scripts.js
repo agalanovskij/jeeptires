@@ -45,7 +45,7 @@ $(document).ready(function(){
 	});
 
 	// custom select
-	var calcSelect = $('.b-calc__select select');
+	var calcSelect = $('.b-calc__select select, .b-filters__select select');
 	calcSelect.selectOrDie({
 		size: 4
 	});
@@ -158,6 +158,19 @@ $(document).ready(function(){
 		}
 	})
 
+	// gallery popup
+	$('.js-gallery').magnificPopup({
+		type: 'image',
+		gallery:{
+			enabled: true,
+			tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+		},
+		midClick: true,
+		overflowY: 'scroll',
+		removalDelay: 300,
+		mainClass: 'mfp-anim'
+	});
+
 	// burger and call buttons
 	var headerBtn = $('.js-header__btn'),
 	hiddenB = $('.js-show');
@@ -184,10 +197,10 @@ $(document).ready(function(){
 		}
 	});
 
-	// menu toggle
-	var menuBtn = $('.js-menu-toggle');
+	// menu toggle, folters toggle
+	var toggleBtn = $('.js-toggle');
 
-	menuBtn.on('click', function(){
+	toggleBtn.on('click', function(){
 
 		if ( $(this).hasClass('active') ) {
 			$(this).removeClass('active');
@@ -245,6 +258,19 @@ $(document).ready(function(){
 			}
 
 			e.preventDefault();
+		}
+	});
+
+	// content tabs
+	var bFiltersContent = $('.b-filters__content');
+
+	tabby.init({
+		callbackAfter: function ( toggle, tabID ) {
+			if ( $('[data-tab='+tabID+']').parent().hasClass('b-filters__tabs__tab--auto') ) {
+				bFiltersContent.addClass('b-filters__content--auto')
+			} else {
+				bFiltersContent.removeClass('b-filters__content--auto')
+			}
 		}
 	});
 
