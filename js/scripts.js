@@ -65,22 +65,6 @@ $(document).ready(function(){
 		speed: 700
 	});
 
-	// $('.js-slider__prev').on('click', function(){
-	// 	if (slider.isBeginning) {
-	// 		slider.slideTo(slider.slides.length - 1);
-	// 	} else {
-	// 		slider.slidePrev();
-	// 	}
-	// });
-
-	// $('.js-slider__next').on('click', function(){
-	// 	if (slider.isEnd) {
-	// 		slider.slideTo(0);
-	// 	} else {
-	// 		slider.slideNext();
-	// 	}
-	// });
-
 	// catalog slider
 	var catalogSlider = $('.js-catalog-slider');
 
@@ -144,6 +128,14 @@ $(document).ready(function(){
 
 	});
 
+	// detail images slider
+	var slider = new Swiper('.js-detail-slider', {
+		loop: true,
+		prevButton: '.js-detail-slider__prev',
+		nextButton: '.js-detail-slider__next',
+		speed: 500
+	});
+
 	// popup windows
 	$('.js-window-call').magnificPopup({
 		midClick: true,
@@ -197,7 +189,7 @@ $(document).ready(function(){
 		}
 	});
 
-	// menu toggle, folters toggle
+	// menu toggle, filters toggle
 	var toggleBtn = $('.js-toggle');
 
 	toggleBtn.on('click', function(){
@@ -205,14 +197,14 @@ $(document).ready(function(){
 		if ( $(this).hasClass('active') ) {
 			$(this).removeClass('active');
 
-			$('#' + $(this).data('show')).stop().slideUp(400, function(){
+			$('#' + $(this).data('show')).stop().slideUp(600, function(){
 				$(this).css({ 'display': '', 'height': '' }).removeClass('visible')
 			});
 
 		} else {
 			$(this).addClass('active');
 			
-			$('#' + $(this).data('show')).stop().slideDown(400, function(){
+			$('#' + $(this).data('show')).stop().slideDown(600, function(){
 				$(this).addClass('visible').css({ 'display': '', 'height': '' })
 			});
 		}

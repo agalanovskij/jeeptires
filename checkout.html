@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 
-	<title>Каталог — Jeeptires</title>
+	<title>Оформление заказа — Jeeptires</title>
 
 	<link rel="shortcut icon" href="favicon.png">
 	
@@ -295,9 +295,8 @@
 
 									</div><!-- .b-seasons -->
 
-									Либо выбирайте шины своего любимого бренда:
-
 									<div class="b-brands-list">
+										Либо выбирайте шины своего любимого бренда:
 										<ul>
 											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
 											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
@@ -336,361 +335,213 @@
 
 		</header><!-- .b-header -->
 
-		<div class="l-gray">
+		<div class="l-container l-container--content l-container--notwide">
 
-			<div class="l-container">
-				
-				<div class="b-breadcrumbs">
+			<div class="b-breadcrumbs">
 
-					<ul>
-						<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
-						<li class="b-breadcrumbs__item">Каталог автошин</li>
-					</ul>
+				<ul>
+					<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
+					<li class="b-breadcrumbs__item">Оформление заказа</li>
+				</ul>
 
-				</div><!-- .b-breadcrumbs -->
+			</div><!-- .b-breadcrumbs -->
 
-				<h1 class="b-heading b-heading--h2">Каталог автошин</h1>
+			<h1 class="b-heading b-heading--h2">Оформление заказа</h1>
 
-				<h5 class="b-subheading b-subheading--h5">Выбирайте шины под сезон:</h5>
+			<div class="b-checkout">
 
-				<div class="b-seasons row">
+				<form class="validate-form">
 
-					<div class="col-lg-3 col-sm-6">
-
-						<div class="b-seasons__item b-seasons__item--summer">
-							<a href="#">
-								<img src="img/season-summer.png" alt="">
-								Летние
-							</a>
-						</div>
-
-					</div>
-					
-					<div class="col-lg-3 col-sm-6">
-
-						<div class="b-seasons__item b-seasons__item--winter">
-							<a href="#">
-								<img src="img/season-winter.png" alt="">
-								Зимние
-							</a>
-						</div>
-
-					</div>
-					
-					<div class="col-lg-3 col-sm-6">
-
-						<div class="b-seasons__item b-seasons__item--at">
-							<a href="#"><img src="img/season-at.png" alt="">
-								All Terrain
-							</a>
-						</div>
-
-					</div>
-					
-					<div class="col-lg-3 col-sm-6">
-
-						<div class="b-seasons__item b-seasons__item--mt">
-							<a href="#">
-								<img src="img/season-mt.png" alt="">
-								Грязевые
-							</a>
-						</div>
-
+					<div class="b-checkout__pay-title">
+						Информация о покупателе
 					</div>
 
-				</div><!-- .b-seasons -->
+					<div class="b-checkout__pay-group">
 
-			</div><!-- .l-container -->
+						<div class="b-checkout__fields">
 
-		</div><!-- ..l-gray -->
+							<label class="b-form__label required">
+								<span class="b-form__label__name">Ф.И.О.</span>
+								<input class="b-form__label__field" type="text" required>
+							</label>
 
-		<div class="l-container l-container--content">
+							<label class="b-form__label required">
+								<span class="b-form__label__name">E-mail</span>
+								<input class="b-form__label__field" type="email" required>
+							</label>
 
-			<h5 class="b-subheading b-subheading--h5">Либо выбирайте шины своего любимого бренда:</h5>
+							<label class="b-form__label required">
+								<span class="b-form__label__name">Телефон</span>
+								<input class="b-form__label__field" type="tel" required>
+							</label>
 
-			<div class="b-brands row">
-				
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
+							<label class="b-form__label">
+								<span class="b-form__label__name">Адрес доставки</span>
+								<input class="b-form__label__field" type="text">
+							</label>
 
-					<div class="b-brands__item">
+						</div><!-- .b-checkout__fields -->
 
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br1.jpg" alt="">
+					</div><!-- .b-checkout__pay-group -->
+
+					<div class="b-checkout__pay-group">
+
+						<div class="b-checkout__pay-heading">Выберите способ получения товара:</div>
+
+						<div class="b-checkout__pay-list">
+							
+							<input type="radio" id="delivery-type-1" name="delivery-type" checked>
+							<label for="delivery-type-1">
+								<div class="b-checkout__pay">
+									<span class="b-checkout__pay__img b-checkout__pay__img--home"></span>
+									<span class="b-checkout__pay__text">
+										<strong>Самовывоз</strong>
+										ул. Иркутская 6, бокс 3/12
+									</span>
+								</div>
+							</label>
+
+							<input type="radio" id="delivery-type-2" name="delivery-type">
+							<label for="delivery-type-2">
+								<div class="b-checkout__pay">
+									<span class="b-checkout__pay__img b-checkout__pay__img--car"></span>
+									<span class="b-checkout__pay__text">
+										<strong>Доставка <br> по Хабаровску</strong>
+										Доставка 0 руб.
+									</span>
+								</div>
+							</label>
+
+							<input type="radio" id="delivery-type-3" name="delivery-type">
+							<label for="delivery-type-3">
+								<div class="b-checkout__pay">
+									<span class="b-checkout__pay__img b-checkout__pay__img--rocket"></span>
+									<span class="b-checkout__pay__text">
+										<strong>Отправка в другой <br> город</strong>
+										Доставка до ТК 0 руб.
+									</span>
+								</div>
+							</label>
+
+						</div>
+
+					</div><!-- .b-checkout__pay-group -->
+
+					<div class="b-checkout__pay-group">
+
+						<div class="b-checkout__pay-heading">Выберите способ оплаты:</div>
+
+						<div class="b-checkout__pay-list">
+							
+							<input type="radio" id="payment-type-1" name="payment-type" checked>
+							<label for="payment-type-1">
+								<div class="b-checkout__pay">
+									<span class="b-checkout__pay__img b-checkout__pay__img--cash"></span>
+									<span class="b-checkout__pay__text">
+										<strong>Оплата наличными <br> и банковскими <br> картами</strong>
+									</span>
+								</div>
+							</label>
+
+							<input type="radio" id="payment-type-2" name="payment-type">
+							<label for="payment-type-2">
+								<div class="b-checkout__pay">
+									<span class="b-checkout__pay__img b-checkout__pay__img--bill"></span>
+									<span class="b-checkout__pay__text">
+										<strong>Оплата по счету</strong>
+									</span>
+								</div>
+							</label>
+
+							<input type="radio" id="payment-type-3" name="payment-type">
+							<label for="payment-type-3">
+								<div class="b-checkout__pay">
+									<span class="b-checkout__pay__img b-checkout__pay__img--sber"></span>
+									<span class="b-checkout__pay__text">
+										<strong>Перевод на карту <br> сбербанка</strong>
+									</span>
+								</div>
+							</label>
+
+						</div>
+
+					</div><!-- .b-checkout__pay-group -->
+
+					<div class="b-cart__table b-cart__table--checkout">
+
+						<div class="b-cart__row">
+							<div class="b-cart__cell b-cart__cell--top">Товар</div>
+							<div class="b-cart__cell b-cart__cell--top">Цена</div>
+							<div class="b-cart__cell b-cart__cell--top">Количество</div>
+							<div class="b-cart__cell b-cart__cell--top">Сумма</div>
+							<div class="b-cart__cell b-cart__cell--top"></div>
+						</div><!-- .b-cart__row -->
+
+						<div class="b-cart__row">
+
+							<div class="b-cart__cell">
+								<div class="b-cart__title">
+									<a href="#">
+										<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+									</a>
+								</div>
 							</div>
-							<u>Falken</u>
-						</a>
 
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br2.jpg" alt="">
+							<div class="b-cart__cell">
+								<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
 							</div>
-							<u>Cooper tires</u>
-						</a>
+
+							<div class="b-cart__cell">4</div>
+
+							<div class="b-cart__cell">
+								<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+							</div>
+
+							<div class="b-cart__cell"></div>
+
+						</div><!-- .b-cart__row -->
+
+						<div class="b-cart__row">
+
+							<div class="b-cart__cell">
+								<div class="b-cart__title">
+									<a href="#">
+										<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+									</a>
+								</div>
+							</div>
+
+							<div class="b-cart__cell">
+								<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+							</div>
+							
+							<div class="b-cart__cell">4</div>
+
+							<div class="b-cart__cell">
+								<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+							</div>
+
+							<div class="b-cart__cell"></div>
+
+						</div><!-- .b-cart__row -->
+
+					</div><!-- .b-cart__table -->
+
+					<div class="b-checkout__finish">
+
+						<a class="b-checkout__comment-link" href="#"><u>Добавить комментарий к заказу</u></a>
 						
-					</div><!-- .b-brands__item -->
+						<span class="b-checkout__total">
+							Итого: <strong>51 403 ₽</strong>
+						</span>
 
-				</div><!-- .col-md-2 -->
+						<button class="b-form__submit" type="button">Завершить оформление</button>
 
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
+					</div><!-- .b-checkout__finish -->
 
-					<div class="b-brands__item">
+				</form>
 
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br3.jpg" alt="">
-							</div>
-							<u>Dunlop tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br4.jpg" alt="">
-							</div>
-							<u>Goodyear</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br5.jpg" alt="">
-							</div>
-							<u>Bringestone</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br6.jpg" alt="">
-							</div>
-							<u>Starfire tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br1.jpg" alt="">
-							</div>
-							<u>Falken</u>
-						</a>
-
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br2.jpg" alt="">
-							</div>
-							<u>Cooper tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br3.jpg" alt="">
-							</div>
-							<u>Dunlop tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br4.jpg" alt="">
-							</div>
-							<u>Goodyear</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br5.jpg" alt="">
-							</div>
-							<u>Bringestone</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br6.jpg" alt="">
-							</div>
-							<u>Starfire tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br1.jpg" alt="">
-							</div>
-							<u>Falken</u>
-						</a>
-
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br2.jpg" alt="">
-							</div>
-							<u>Cooper tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-brands-12">
-
-					<div class="b-brands__item">
-
-						<a href="#">
-							<div class="b-brands__pic">
-								<img src="img/tmp/br3.jpg" alt="">
-							</div>
-							<u>Dunlop tires</u>
-						</a>
-						
-					</div><!-- .b-brands__item -->
-
-				</div><!-- .col-md-2 -->
-
-			</div><!-- .row -->
-
-			<div class="l-row b-article">
-
-				<div class="l-row__full">
-					<h2 class="b-heading b-heading--h2">Надежные шины в хабаровске по самым доступным ценам</h2>
-				</div>
-
-				<div class="l-row__half">
-
-					<p>
-						Какому водителю не приходилось часами бродить по авторынкам с целью покупки новых покрышек? Эти времена уже давно прошли, 
-						и теперь процесс выбора и покупки автошин стал гораздо проще — в этом Вам поможет компания «Джип Тайрс», предлагающая 
-						достойное обслуживание и лучшие цены в Хабаровске.
-					</p>
-
-					<p>
-						Каждый водитель сможет найти в нашем каталоге шин подходящий вариант как по цене, так и по качеству. 
-						Такого огромного выбора автошин, как у нас, Вы не встретите нигде!
-					</p>
-
-					<p><strong>Почему купить шины в Хабаровске выгоднее всего у нас?</strong></p>
-
-					<p>
-						Одним из основных достоинств компании «Джип Тайрс» является политика ценообразования. 
-						Однако цены и ассортимент — это далеко не все преимущества.
-					</p>
-
-				</div><!-- .l-row__half -->
-
-				<div class="l-row__half">
-
-					<strong>Так, решив купить шины в «Джип Тайрс» каждый клиент получит:</strong>
-
-					<ul>
-						<li>бесплатную доставку по всему Хабаровску;</li>
-						<li>гарантийное обслуживание (все автошины имеют гарантию в 1 год);</li>
-						<li>возможность оплаты покупки различными способами;</li>
-						<li>консультацию опытного мастера при выборе и покупке резины.</li>
-						<li>Как видите, приобретать автошины у нас — выгодно!</li>
-					</ul>
-
-					<p>
-						Одним из основных направлений деятельности «Джип Тайрс» является продажа резины Cooper. Авторезина 
-						этой марки является одной из наиболее надежных и известных во всем мире. Эти шины завоевали доверие тысяч автомобилистов, 
-						а все благодаря их высочайшему качеству, сравнительно большому ресурсу пробега (до 100 тысяч километров), 
-						невысокой стоимости и отличным дорожным показателям.
-					</p>
-
-				</div><!-- .l-row__half -->
-
-				<div class="l-row__full">
-					<span class="b-article__blue">В нашем <a href="#">каталоге</a> можно найти огромный выбор шин данного производителя: не только для летней езды, но и для зимней. Спешите! Количество ограничено.</span>
-				</div><!-- .l-row-full -->
-
-			</div><!-- .l-row -->
+			</div><!-- .b-checkout -->
 
 		</div><!-- .l-container -->
 		
