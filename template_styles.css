@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300&subset=latin,latin-ext,cyrillic);
 html {
   height: 100%;
+  -ms-overflow-style: scrollbar;
 }
 body {
   font: 14px/20px 'Roboto', Arial, sans-serif;
@@ -54,6 +55,21 @@ a:hover u {
 .l-container--notwide {
   max-width: 1180px;
 }
+@media all and (max-width: 1200px) {
+  .l-container--notwide {
+    max-width: 992px;
+  }
+}
+@media all and (max-width: 992px) {
+  .l-container--notwide {
+    max-width: 767px;
+  }
+}
+@media all and (max-width: 767px) {
+  .l-container--notwide {
+    padding: 0 15px;
+  }
+}
 @media all and (max-width: 1420px) {
   .l-container {
     max-width: 1200px;
@@ -81,6 +97,16 @@ a:hover u {
 }
 .l-container--about {
   max-width: 940px;
+}
+@media all and (max-width: 992px) {
+  .l-container--about {
+    max-width: 767px;
+  }
+}
+@media all and (max-width: 767px) {
+  .l-container--about {
+    padding: 0 15px;
+  }
 }
 .l-container--content {
   padding-top: 18px;
@@ -136,6 +162,17 @@ a:hover u {
 @media all and (max-width: 992px) {
   .l-gray {
     padding: 8px 0;
+  }
+}
+.l-gray--content {
+  border-top: 1px solid #e2e2e2;
+}
+.l-gray--visible {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .l-gray--visible {
+    display: block;
   }
 }
 .l-gray .b-heading:last-child {
@@ -455,6 +492,8 @@ a:hover u {
   vertical-align: middle;
   font-size: 12px;
   color: #8d8d8d;
+  position: relative;
+  z-index: 1;
 }
 @media all and (max-width: 1200px) {
   .b-header__phone__link {
@@ -722,6 +761,9 @@ a:hover u {
 .b-header__submenu .b-brands-list {
   margin-bottom: 35px;
 }
+.b-header__submenu .b-brands-list ul {
+  margin-top: 7px;
+}
 .b-header__calc {
   float: right;
 }
@@ -943,6 +985,8 @@ a:hover u {
 .b-calc__select__between {
   display: inline-block;
   margin: 0 -8px;
+  position: relative;
+  top: 2px;
 }
 .b-calc__select__group {
   display: inline-block;
@@ -1028,6 +1072,7 @@ a:hover u {
   text-overflow: ellipsis;
   border-bottom: 2px dotted #7fa5c6;
   line-height: 50px;
+  margin-top: 3px;
 }
 @media all and (max-width: 1420px) {
   .b-calc__select .sod_select .sod_label {
@@ -1187,6 +1232,44 @@ a:hover u {
   border: 1px solid #004b8e;
   box-shadow: inset 1px 1px 0 #004b8e, inset -1px -1px 0 #004b8e;
 }
+.b-calc__readonly {
+  display: inline-block;
+  vertical-align: middle;
+  height: 59px;
+  padding: 0 20px 0 5px;
+  border: 1px solid #d5d5d5;
+  color: #004b8e;
+  font-weight: 300;
+  outline: 0;
+  position: relative;
+  line-height: 59px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media all and (max-width: 1420px) {
+  .b-calc__readonly {
+    height: 49px;
+    line-height: 45px;
+  }
+}
+.b-calc__readonly__label {
+  display: inline-block;
+  vertical-align: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 2px dotted transparent;
+  line-height: 50px;
+  margin-top: 3px;
+}
+@media all and (max-width: 1420px) {
+  .b-calc__readonly__label {
+    height: 40px;
+    line-height: 40px;
+  }
+}
 .b-calc__spinner {
   display: inline-block;
   vertical-align: middle;
@@ -1217,6 +1300,7 @@ a:hover u {
   text-overflow: ellipsis;
   border-bottom: 2px dotted #7fa5c6;
   line-height: 50px;
+  margin-top: 3px;
 }
 @media all and (max-width: 1420px) {
   .b-calc__spinner__field {
@@ -1330,6 +1414,363 @@ a:hover u {
 }
 .b-calc__auto u {
   border-bottom: 2px solid #b1becf;
+}
+@media all and (max-width: 767px) {
+  .b-tires-hidden {
+    display: none;
+  }
+  .b-tires-hidden.visible {
+    display: block;
+  }
+}
+.b-tires-calc-text {
+  color: #727272;
+  margin-bottom: 16px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc-text {
+    display: none;
+  }
+}
+.b-tires-calc {
+  background: #fff;
+  border: 1px solid #c2c2c2;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
+  padding: 20px 30px 25px 20px;
+  position: relative;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc {
+    box-shadow: none;
+    padding: 12px 15px;
+    margin: 0 -15px;
+  }
+}
+.b-tires-calc:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.b-tires-calc__heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__heading {
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__heading--inline {
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 13px;
+  }
+}
+.b-tires-calc__left {
+  float: left;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__left {
+    float: none;
+    margin-bottom: 57px;
+    position: relative;
+  }
+}
+.b-tires-calc__left:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: solid #004b8e;
+  border-width: 0 3px 3px 0;
+  position: relative;
+  margin-right: 12px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 97px;
+  left: 50%;
+  margin-left: -8px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__left:after {
+    top: 100%;
+    margin-top: 20px;
+    left: 142px;
+    margin-left: -16px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+.b-tires-calc__right {
+  float: right;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__right {
+    float: none;
+  }
+}
+.b-tires-calc__bottom {
+  clear: both;
+}
+.b-tires-calc__speed {
+  display: inline-block;
+  font-size: 24px;
+  margin-top: 13px;
+  padding-right: 20px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__speed {
+    font-size: 14px;
+  }
+}
+.b-tires-calc__speed span {
+  font-size: 36px;
+  font-weight: 300;
+  color: #004b8e;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__speed span {
+    font-size: 24px;
+  }
+}
+.b-tires-calc__scale {
+  float: right;
+  display: block;
+  width: 626px;
+  height: 28px;
+  background: #efefef;
+  border-bottom: 1px solid #cfcfcf;
+  position: relative;
+  margin-bottom: 35px;
+  margin-top: 10px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__scale {
+    float: none;
+    width: 280px;
+  }
+}
+.b-tires-calc__scale:before {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 28px;
+  background: #fff;
+  position: absolute;
+  left: -11px;
+  bottom: 0;
+  z-index: 1;
+}
+.b-tires-calc__scale:after {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 28px;
+  background: #fff;
+  position: absolute;
+  right: -11px;
+  bottom: 0;
+  z-index: 1;
+}
+.b-tires-calc__scale__over {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 28px solid #fff;
+  border-right: 626px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__scale__over {
+    border-right-width: 280px;
+  }
+}
+.b-tires-calc__scale__arrow {
+  width: 52px;
+  height: 67px;
+  background: url('img/calc-arrow.png');
+  opacity: 0.5;
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  margin-left: -26px;
+  z-index: 2;
+}
+.b-tires-calc__scale__track {
+  background: url('img/track.png');
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.b-tires-calc__scale__track:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-bottom: 0;
+  border-top: 15px solid #efefef;
+  position: absolute;
+  bottom: 0;
+  right: -11px;
+}
+.b-tires-calc__scale__track:after {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 13px;
+  background: #efefef;
+  position: absolute;
+  bottom: 15px;
+  right: -11px;
+}
+.b-tires-calc__scale ul {
+  width: 100%;
+  text-align: justify;
+  position: absolute;
+  left: 0;
+  bottom: -31px;
+  line-height: 0;
+}
+.b-tires-calc__scale ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.b-tires-calc__scale ul li {
+  display: inline-block;
+  font-style: normal;
+  font-size: 12px;
+  color: #bcbcbc;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__scale ul li:nth-child(2n) {
+    display: none;
+  }
+}
+.b-tires-calc__example {
+  line-height: 28px;
+  color: #b2b2b2;
+  position: relative;
+  padding-right: 50%;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__example {
+    line-height: 20px;
+    padding-right: 0;
+  }
+}
+.b-tires-calc__actions {
+  float: right;
+  padding-right: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc__actions {
+    float: none;
+    position: static;
+    margin-top: 20px;
+  }
+}
+.b-tires-calc__clear {
+  color: #004b8e;
+}
+.b-tires-calc__clear:hover {
+  text-decoration: underline;
+}
+.b-tires-calc .b-form__submit {
+  display: inline-block;
+  margin-right: 30px;
+}
+.b-tires-calc .b-tires-table {
+  width: 342px;
+  margin-bottom: 0;
+}
+@media all and (max-width: 1420px) {
+  .b-tires-calc .b-tires-table {
+    width: 272px;
+  }
+}
+@media all and (max-width: 767px) {
+  .b-tires-calc .b-tires-table {
+    width: 100%;
+  }
+}
+.b-tires-calc .b-tires-table th {
+  padding-top: 0;
+}
+.b-tires-table {
+  width: 100%;
+  margin-top: 4px;
+  letter-spacing: 0.025em;
+  margin-bottom: 54px;
+}
+@media all and (max-width: 767px) {
+  .b-tires-table {
+    font-size: 12px;
+  }
+}
+.b-tires-table th {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #7fa5c6;
+  padding: 14px 0;
+}
+@media all and (max-width: 767px) {
+  .b-tires-table th {
+    font-size: 14px;
+  }
+}
+.b-tires-table th:first-child {
+  text-align: left;
+}
+.b-tires-table th:nth-child(4) {
+  text-align: right;
+}
+@media all and (max-width: 767px) {
+  .b-tires-table th:nth-child(2),
+  .b-tires-table th:nth-child(3) {
+    display: none;
+  }
+  .b-tires-table th:last-child {
+    display: table-cell;
+  }
+}
+.b-tires-table td {
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0;
+}
+.b-tires-table td:first-child {
+  text-align: left;
+}
+.b-tires-table td:nth-child(4) {
+  text-align: right;
+  color: #004b8e;
+}
+@media all and (max-width: 767px) {
+  .b-tires-table td:nth-child(2),
+  .b-tires-table td:nth-child(3) {
+    display: none;
+  }
+  .b-tires-table td:last-child {
+    display: table-cell;
+  }
+}
+.b-tires-table .unit {
+  color: #adadad;
 }
 .b-slider {
   clear: both;
@@ -1523,6 +1964,63 @@ a:hover u {
     right: 15px;
   }
 }
+.b-heading--toggle {
+  position: relative;
+}
+@media all and (max-width: 767px) {
+  .b-heading--toggle {
+    border: 1px solid #c2c2c2;
+    padding: 16px 15px;
+    padding-right: 50px;
+    margin: -1px -15px;
+    cursor: pointer;
+  }
+}
+.b-heading--toggle .icon-down-open {
+  font-size: 20px;
+  color: #004b8e;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 23px;
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .b-heading--toggle .icon-down-open {
+    display: block;
+  }
+}
+.b-heading--toggle.active .icon-down-open:before {
+  content: '\e876';
+}
+@media all and (max-width: 767px) {
+  .b-heading--hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+}
+.b-heading--visible {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .b-heading--visible {
+    display: block;
+  }
+}
+.b-heading__note {
+  font-size: 12px;
+  color: #8c8c8c;
+  text-transform: none;
+  font-weight: 400;
+  margin-top: 10px;
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .b-heading__note {
+    display: block;
+  }
+}
 .b-heading__controls {
   display: inline-block;
   margin-left: 5px;
@@ -1563,6 +2061,36 @@ a:hover u {
 }
 .b-heading__pagination__bullet--active {
   background: #004b8e;
+}
+.b-heading__arrow {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: solid #004b8e;
+  border-width: 0 3px 3px 0;
+  position: relative;
+  margin-right: 12px;
+}
+@media all and (max-width: 767px) {
+  .b-heading__arrow {
+    display: none;
+  }
+}
+.b-heading__arrow:before {
+  content: '';
+  display: block;
+  width: 27px;
+  height: 3px;
+  background: #004b8e;
+  position: absolute;
+  bottom: -3px;
+  right: -1px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 .b-heading .b-catalog__rating {
   display: inline-block;
@@ -2743,6 +3271,15 @@ a:hover u {
 .b-article--about {
   line-height: 26px;
 }
+.b-article--calc {
+  line-height: 24px;
+  margin-top: 34px;
+}
+@media all and (max-width: 767px) {
+  .b-article--calc {
+    margin-top: 14px;
+  }
+}
 @media all and (max-width: 767px) {
   .b-service {
     padding-top: 10px;
@@ -3818,6 +4355,11 @@ a:hover u {
 }
 .b-breadcrumbs + .b-heading {
   margin-top: 20px;
+}
+@media all and (max-width: 767px) {
+  .b-breadcrumbs + .b-heading--hidden {
+    margin-top: 0;
+  }
 }
 .b-brand-info {
   margin-bottom: 11px;

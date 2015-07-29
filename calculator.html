@@ -1,0 +1,901 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Шинный калькулятор — Jeeptires</title>
+
+	<link rel="shortcut icon" href="favicon.png">
+	
+	<!-- Reset styles -->
+	<link rel="stylesheet" href="css/normalize.css"> 
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/bootstrap-grid-12.css"> 
+	<link rel="stylesheet" href="css/icons.css">
+
+	<!-- Plugins' styles -->
+	<link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
+	<link rel="stylesheet" href="js/vendor/magnific-popup/magnific-popup.min.css">
+
+	<!-- Main styles -->
+	<link rel="stylesheet" href="template_styles.css">
+
+	<!--[if lt IE 10]><script src="js/IE9.js"></script><![endif]-->
+	
+	<!-- Scripts -->
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/fastclick.min.js"></script>
+	<script src="js/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<script src="js/vendor/jquery-maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="js/vendor/swiper/swiper.jquery.min.js"></script>
+	<script src="js/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/vendor/select-or-die/selectordie.min.js"></script>
+	<script src="js/vendor/tabby/classList.min.js"></script>
+	<script src="js/vendor/tabby/tabby.min.js"></script>
+	<script src="js/vendor/jquery-spinner/jquery.spinner.min.js"></script>
+	<script src="js/vendor/jquery-validation/jquery.validate.min.js"></script>
+	<script src="js/vendor/jquery-validation/localization/messages_ru.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+
+<body>
+
+	<div class="l-page">
+
+		<header class="b-header">
+
+			<div class="b-header__top">
+
+				<div class="b-header__btn b-header__btn--burger js-header__btn" data-show="js-header__nav"><span></span></div>
+				<div class="b-header__btn b-header__btn--call js-header__btn" data-show="js-window-call"></div>
+
+				<div class="l-container">
+
+					<nav class="b-header__nav js-show" id="js-header__nav">
+						<ul>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>О нас</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Доставка и оплата</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Гарантии</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Скидки</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Бренды</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Шины в кредит</u></a>
+							</li>
+							<li class="b-header__nav__item">
+								<a class="b-header__nav__link" href="#"><u>Контакты</u></a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="b-header__address">
+						г. Хабаровск, ул. Иркутская 6, офис №105
+					</div><!-- .b-header__address -->
+
+				</div><!-- .l-container -->
+
+				<div class="b-window mfp-hide b-header__window js-show" id="js-window-call">
+
+					<div class="b-window__title">
+						<span>Заказать обратный звонок</span>
+					</div>
+
+					<div class="b-window__content">
+
+						<form class="b-form b-form--window">
+
+							<label class="b-form__label">
+								<span class="b-form__label__name">Как к вам обращаться?</span>
+								<input class="b-form__label__field" type="text">
+							</label>
+
+							<label class="b-form__label">
+								<span class="b-form__label__name">Ваш номер телефона</span>
+								<input class="b-form__label__field" type="tel">
+							</label>
+
+							<div class="b-form__end">
+								<input class="b-form__submit" type="submit" value="Я жду звонка">
+							</div>
+
+						</form>
+
+					</div><!-- .b-window__content -->
+
+				</div><!-- .js-window -->
+
+			</div><!-- .b-header__top -->
+
+			<div class="l-container">
+
+				<div class="b-header__middle">
+
+					<div class="b-header__middle__cell">
+
+						<a class="b-header__logo" href="/"></a>
+
+						<div class="b-header__motto">
+							Онлайн-магазин автомобильных <br> шин и дисков
+						</div>
+
+					</div><!-- .b-header__middle__cell -->
+
+					<div class="b-header__middle__cell">
+
+						<div class="b-header__phone">
+							<div class="b-header__phone__number">+7 (4212) 62-88-00</div>
+							<a class="b-header__phone__link js-window-call" href="#js-window-call"><u>Заказать обратный звонок</u></a>
+						</div>
+
+					</div><!-- .b-header__middle__cell -->
+
+					<div class="b-header__middle__cell">
+
+						<a class="b-header__cart" href="#">
+							12 единиц – <span>12 200 руб</span>
+						</a>
+
+					</div><!-- .b-header__middle__cell -->
+
+				</div><!-- .b-header__middle -->
+
+			</div><!-- .l-container -->
+
+			<div class="b-header__bottom">
+
+				<div class="l-container">
+
+					<div class="b-header__menu-toggle js-toggle" data-show="js-header__menu">Меню</div>
+					
+					<div class="b-header__menu" id="js-header__menu">
+
+						<ul>
+							<li class="b-header__menu__item b-header__menu__item--sub">
+								<a class="b-header__menu__link" href="#">Каталог автошин</a>
+
+								<div class="b-header__submenu">
+
+									Выбирайте шины под сезон:
+									
+									<div class="b-seasons row">
+
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--summer">
+												<a href="#">
+													<img src="img/season-summer.png" alt="">
+													Летние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--winter">
+												<a href="#">
+													<img src="img/season-winter.png" alt="">
+													Зимние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--at">
+												<a href="#"><img src="img/season-at.png" alt="">
+													All Terrain
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--mt">
+												<a href="#">
+													<img src="img/season-mt.png" alt="">
+													Грязевые
+												</a>
+											</div>
+
+										</div>
+
+									</div><!-- .b-seasons -->
+
+									<div class="b-brands-list">
+										Либо выбирайте шины своего любимого бренда:
+										<ul>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+										</ul>
+									</div><!-- .b-brands-list -->
+
+									<a class="b-header__submenu__showall" href="#"><u>Показать все</u></a>
+
+								</div><!-- .b-header__submenu -->
+
+							</li>
+							<li class="b-header__menu__item b-header__menu__item--sub">
+								<a class="b-header__menu__link" href="#">Каталог дисков</a>
+
+								<div class="b-header__submenu">
+
+									Выбирайте шины под сезон:
+									
+									<div class="b-seasons row">
+
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--summer">
+												<a href="#">
+													<img src="img/season-summer.png" alt="">
+													Летние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--winter">
+												<a href="#">
+													<img src="img/season-winter.png" alt="">
+													Зимние
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--at">
+												<a href="#"><img src="img/season-at.png" alt="">
+													All Terrain
+												</a>
+											</div>
+
+										</div>
+										
+										<div class="col-lg-3 col-sm-6">
+
+											<div class="b-seasons__item b-seasons__item--mt">
+												<a href="#">
+													<img src="img/season-mt.png" alt="">
+													Грязевые
+												</a>
+											</div>
+
+										</div>
+
+									</div><!-- .b-seasons -->
+
+									<div class="b-brands-list">
+										Либо выбирайте шины своего любимого бренда:
+										<ul>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Falken</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Cooper tires</u></a></li>
+											<li class="b-brands-list__item"><a href="#"><u>Dunlop tires</u></a></li>
+										</ul>
+									</div><!-- .b-brands-list -->
+
+									<a class="b-header__submenu__showall" href="#"><u>Показать все</u></a>
+
+								</div><!-- .b-header__submenu -->
+
+							</li>
+							<li class="b-header__menu__item">
+								<a class="b-header__menu__link" href="#">Шиномонтаж</a>
+							</li>
+							<li class="b-header__menu__item">
+								<a class="b-header__menu__link" href="#">Хранение</a>
+							</li>
+						</ul>
+					</div><!-- .b-header__menu -->
+
+					<a class="b-header__calc b-header__menu__link" href="#">Шинный калькулятор</a>
+
+				</div><!-- .l-container -->
+
+			</div><!-- .b-header__bottom -->
+
+		</header><!-- .b-header -->
+
+		<main class="l-main">
+
+			<div class="l-container l-container--content l-container--about">
+
+				<div class="b-breadcrumbs">
+
+					<ul>
+						<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
+						<li class="b-breadcrumbs__item">Шинный калькулятор</li>
+					</ul>
+
+				</div><!-- .b-breadcrumbs -->
+
+				<h1 class="b-heading b-heading--h2 b-heading--hidden">
+					<i class="b-heading__arrow"></i>
+					Шинный калькулятор
+				</h1>
+
+			</div><!-- .l-container -->
+
+			<div class="l-gray l-gray--content l-gray--visible"></div>
+
+			<div class="l-container l-container--about">
+				<h2 class="b-heading b-heading--h2 b-heading--toggle b-heading--visible js-toggle" data-show="js-calc-1">
+					<i class="b-heading__arrow"></i>
+					Шинный калькулятор
+
+					<div class="b-heading__note">
+						Шинный калькулятор, позволяет рассчитать как  повлияет на 
+						эксплуатацию автомобиля изменение стандартных размеров шин.
+					</div>
+
+					<i class="icon-down-open"></i>
+				</h2>
+			</div><!-- .l-container l-container-about -->
+
+			<div class="b-tires-hidden" id="js-calc-1">
+
+				<div class="l-gray l-gray--content">
+					<div class="l-container l-container--about">
+
+						<p class="b-tires-calc-text">Шинный калькулятор, позволяет рассчитать как  повлияет на эксплуатацию автомобиля изменение стандартных размеров шин.</p>
+
+						<div class="b-tires-calc">
+
+							<div class="b-tires-calc__left">
+
+								<h4 class="b-tires-calc__heading">Старый размер</h4>
+								
+								<div class="b-calc__select">
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Ширина:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">/</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Профиль:</span>
+
+										<select>
+											<option value="295">295</option>
+											<option value="296">296</option>
+											<option value="297">297</option>
+											<option value="298">298</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">R</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Диаметр:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+
+								</div><!-- .b-calc__select -->
+
+							</div><!-- .b-tires-calc__left -->
+
+							<div class="b-tires-calc__right">
+
+								<h4 class="b-tires-calc__heading">Новый размер</h4>
+
+								<div class="b-calc__select">
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Ширина:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">/</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Профиль:</span>
+
+										<select>
+											<option value="295">295</option>
+											<option value="296">296</option>
+											<option value="297">297</option>
+											<option value="298">298</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">R</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Диаметр:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+
+								</div><!-- .b-calc__select -->
+								
+							</div><!-- .b-tires-calc__right -->
+
+							<div class="b-tires-calc__bottom">
+
+								<h4 class="b-tires-calc__heading b-tires-calc__heading--inline">Показания спидометра</h4>
+
+								<div class="b-tires-calc__speed js-calc-speed" data-speed="100">
+									<span>135 </span>км/ч
+								</div>
+
+								<div class="b-tires-calc__scale">
+									<span class="b-tires-calc__scale__over"></span>
+									<span class="b-tires-calc__scale__track js-calc-track"></span>
+									<span class="b-tires-calc__scale__arrow js-calc-arrow"></span>
+
+									<ul>
+										<li>0</li>
+										<li>25</li>
+										<li>50</li>
+										<li>75</li>
+										<li>100</li>
+										<li>125</li>
+										<li>150</li>
+										<li>175</li>
+										<li>200</li>
+									</ul>
+								</div>
+
+							</div><!-- .b-tires__calc__bottom -->
+
+						</div><!-- .b-tires-calc -->
+
+					</div><!-- .l-container -->
+				</div><!-- .l-gray -->
+
+				<div class="l-container l-container--about">
+
+					<table class="b-tires-table">
+
+						<tr>
+							<th>Параметры</th>
+							<th>Старый размер</th>
+							<th>Новый размер</th>
+							<th>Изменение</th>
+						</tr>
+
+						<tr>
+							<td>Ширина профиля</td>
+							<td>195 <span class="unit">мм</span></td>
+							<td>195 <span class="unit">мм</span></td>
+							<td>
+								<strong>10</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Высота профиля</td>
+							<td>127 <span class="unit">мм</span></td>
+							<td>127 <span class="unit">мм</span></td>
+							<td>
+								<strong>-24</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Внутренний диаметр</td>
+							<td>381 <span class="unit">мм</span></td>
+							<td>381 <span class="unit">мм</span></td>
+							<td>
+								<strong>-25</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Внешний диаметр</td>
+							<td>635 <span class="unit">мм</span></td>
+							<td>635 <span class="unit">мм</span></td>
+							<td>
+								<strong>-74</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Изменение дорожного просвета</td>
+							<td></td>
+							<td></td>
+							<td>
+								<strong>-37</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Реальная скорость</td>
+							<td></td>
+							<td></td>
+							<td>
+								<strong>123.69</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Погрешность спидометра</td>
+							<td></td>
+							<td></td>
+							<td>
+								<strong>-16.31</strong> 
+								<span class="unit">мм</span>
+							</td>
+						</tr>
+						
+					</table><!-- .b-tires-table -->
+
+				</div><!-- .l-container -->
+
+			</div><!-- #js-calc-1 -->
+
+			<div class="l-gray l-gray--content l-gray--visible"></div>
+
+			<div class="l-container l-container--about">
+				<h2 class="b-heading b-heading--h2 b-heading--toggle js-toggle" data-show="js-calc-2">
+					<i class="b-heading__arrow"></i>
+					Перевести дюймовый размер в метрический
+
+					<i class="icon-down-open"></i>
+				</h2>
+			</div><!-- .l-container l-container-about -->
+
+			<div class="l-gray l-gray--content">
+
+				<div class="b-tires-hidden" id="js-calc-2">
+
+					<div class="l-container l-container--about">
+						
+						<div class="b-tires-calc">
+
+							<div class="b-tires-calc__left">
+
+								<h4 class="b-tires-calc__heading">Дюймовый размер</h4>
+								
+								<div class="b-calc__select">
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Ширина:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">/</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Профиль:</span>
+
+										<select>
+											<option value="295">295</option>
+											<option value="296">296</option>
+											<option value="297">297</option>
+											<option value="298">298</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">R</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Диаметр:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+
+								</div><!-- .b-calc__select -->
+
+							</div><!-- .b-tires-calc__left -->
+
+							<div class="b-tires-calc__right">
+
+								<h4 class="b-tires-calc__heading">Метрический размер</h4>
+
+								<div class="b-calc__select">
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Ширина:</span>
+
+										<span class="b-calc__readonly">
+											<span class="b-calc__readonly__label">
+												13
+											</span>
+										</span>
+									</span>
+									<span class="b-calc__select__between">/</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Профиль:</span>
+
+										<span class="b-calc__readonly">
+											<span class="b-calc__readonly__label">
+												295
+											</span>
+										</span>
+									</span>
+									<span class="b-calc__select__between">R</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Диаметр:</span>
+
+										<span class="b-calc__readonly">
+											<span class="b-calc__readonly__label">
+												13
+											</span>
+										</span>
+									</span>
+
+								</div><!-- .b-calc__select -->
+								
+							</div><!-- .b-tires-calc__right -->
+
+							<div class="b-tires-calc__bottom">
+
+								<div class="b-tires-calc__example">
+									Пример: <br>
+									30 / 9.5 R16 = 235 / 75 R16 <br>
+									Ширина задается через точку (примеры: 8.5; 9.5; 11.5 и т.п.)
+
+									<div class="b-tires-calc__actions">
+										<button class="b-form__submit" type="button">Рассчитать</button>
+										<a class="b-tires-calc__clear" href="#">Очистить</a>
+									</div><!-- .b-tires-calc__actions -->
+
+								</div><!-- .b-tires-calc__example -->
+
+							</div><!-- .b-tires__calc__bottom -->
+
+						</div><!-- .b-tires-calc -->
+
+					</div><!-- .l-container -->
+
+				</div><!-- .b-tires-hidden -->
+
+			</div><!-- .l-gray -->
+
+			<div class="l-container l-container--about">
+
+				<h2 class="b-heading b-heading--h2 b-heading--toggle js-toggle" data-show="js-calc-3">
+					<i class="b-heading__arrow"></i>
+					Подобрать ширину диска под размер ваших автошин
+
+					<i class="icon-down-open"></i>
+				</h2>
+
+			</div><!-- .l-container -->
+
+			<div class="l-gray l-gray--content">
+
+				<div class="b-tires-hidden" id="js-calc-3">
+
+					<div class="l-container l-container--about">
+						
+						<div class="b-tires-calc">
+
+							<div class="b-tires-calc__left">
+
+								<h4 class="b-tires-calc__heading">Типоразмер шины</h4>
+								
+								<div class="b-calc__select">
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Ширина:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">/</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Профиль:</span>
+
+										<select>
+											<option value="295">295</option>
+											<option value="296">296</option>
+											<option value="297">297</option>
+											<option value="298">298</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">R</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Диаметр:</span>
+
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
+
+								</div><!-- .b-calc__select -->
+
+							</div><!-- .b-tires-calc__left -->
+
+							<div class="b-tires-calc__right">
+
+								<table class="b-tires-table">
+									<tr>
+										<th colspan="2">Параметры диска (в дюймах)</th>
+									</tr>
+									<tr>
+										<td>Диаметр</td>
+										<td>195 <span class="unit">мм</span></td>
+									</tr>
+									<tr>
+										<td>Ширина минимальная</td>
+										<td>127 <span class="unit">мм</span></td>
+									</tr>
+									<tr>
+										<td>Ширина максимальная</td>
+										<td>381 <span class="unit">мм</span></td>
+									</tr>
+								</table><!-- .b-tires-table -->
+								
+							</div><!-- .b-tires-calc__right -->
+
+						</div><!-- .b-tires-calc -->
+
+					</div><!-- .l-container -->
+
+				</div>
+
+			</div><!-- .l-gray -->
+
+			<div class="l-container l-container--about b-article b-article--calc">
+				<p>Автомобильные шины - один из важнейших факторов поведения автомобиля на дороге.
+				Лучше всего устанавливать шины с размерами, рекомендованными автопроизводителем для данного автомобиля.
+				Если такой возможности нет, допускается установка автопокрышки альтернативного размера.</p>
+				 
+				<p><strong>Чем может быть полезен шинный калькулятор для вас?</strong></p>
+				 
+				<p>1. Сравнить размеры автошин. <br>
+				Введите в поле "Старый типоразмер" параметры вашей нынешней автошины, а в поле "Новый типоразмер" параметры той, которую вы хотите поставить.
+				В поле "Разница" появится значения различия данных размеров: ширины (L), высоты профиля (Н), посадочного диаметра (d) и внешнего диаметра (D). Изменение клиренса вашего автомобиля можно высчитать по формуле: Клиренс= 0,5*разницу внешнего диаметра.</p>
+				 
+				<p>2. Подобрать ширину диска под ваш размер автошин. <br>
+				Если вы не уверены какой ширины вам нужен диск под новые автошины, то введите в поле "Типоразмер шины" параметры вашей.</p>
+				 
+				<p>3. Перевести дюймовый размер в метрический. <br>
+				Данный конвертер поможет вам посчитать метрические размеры шины с дюймовыми параметрами. Введите в поле "Американский размер" параметры шины и нажмите Расчет.
+				Внимание! Значение ширины вводиться через точку (пример 10.5).</p>
+			</div><!-- .l-container -->
+
+		</main><!-- .l-main -->
+
+		<footer class="b-footer">
+
+			<div class="l-container">
+
+				<div class="b-footer__nav">
+					<ul>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Бренды</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Доставка и оплата</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Гарантии</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Скидки</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>О нас</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Новости компании</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Контакты</u></a>
+						</li>
+					</ul>
+				</div><!-- .b-footer__nav -->
+
+				<div class="b-footer__menu">
+					<ul>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Каталог автошин</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Каталог дисков</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Шиномонтаж</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Шинный калькулятор</a>
+						</li>
+					</ul>
+				</div><!-- .b-footer__menu -->
+
+				<div class="b-footer__phone">
+
+					<div class="b-footer__phone__number">
+						+7 (4212) 62-88-00
+					</div>
+
+					<div class="b-footer__copyright">
+						© ИП Фуфаев И.С.
+					</div>
+
+				</div><!-- .b-footer__phone -->
+
+				<div class="b-footer__contacts">
+					г. Хабаровск, ул. Иркутская 6, офис №105 <br>
+					E-mail: <a href="mailto:info@jeeptires.ru">info@jeeptires.ru</a> <br>
+					Skype: Jeeptires
+
+					<div class="b-footer__madeby">
+						<a href="#"><u>Разработка сайта</u></a> — Веб-студия «Факт»
+					</div>
+
+				</div><!-- .b-footer__contacts -->
+				
+			</div><!-- .l-container -->
+
+		</footer><!-- .b-footer -->
+		
+	</div><!-- .l-page -->
+
+</body>
+
+</html>

@@ -28,7 +28,10 @@
 @font-roboto: 'Roboto', Arial, sans-serif;
 
 // General styles
-html { height: 100%; }
+html {
+	height: 100%;
+	-ms-overflow-style: scrollbar;
+}
 
 body {
 	font: 14px/20px @font-roboto;
@@ -99,6 +102,18 @@ a {
 
 	&--notwide {
 		max-width: 1180px;
+
+		@media all and (max-width: @mq-large) {
+			max-width: @mq-medium;
+		}
+
+		@media all and (max-width: @mq-medium) {
+			max-width: @mq-small;
+		}
+
+		@media all and (max-width: @mq-small) {
+			padding: 0 15px;
+		}
 	}
 
 	@media all and (max-width: @max-width) {
@@ -125,6 +140,14 @@ a {
 
 	&--about {
 		max-width: 940px;
+
+		@media all and (max-width: @mq-medium) {
+			max-width: @mq-small;
+		}
+
+		@media all and (max-width: @mq-small) {
+			padding: 0 15px;
+		}
 	}
 
 	&--content {
@@ -183,6 +206,18 @@ a {
 
 	@media all and (max-width: @mq-medium) {
 		padding: 8px 0;
+	}
+
+	&--content {
+		border-top: 1px solid #e2e2e2;
+	}
+
+	&--visible {
+		display: none;
+
+		@media all and (max-width: @mq-small) {
+			display: block;
+		}
 	}
 
 	.b-heading {
@@ -535,6 +570,8 @@ a {
 			vertical-align: middle;
 			font-size: 12px;
 			color: #8d8d8d;
+			position: relative;
+			z-index: 1;
 
 			@media all and (max-width: @mq-large) {
 				display: block;
@@ -822,6 +859,10 @@ a {
 
 		.b-brands-list {
 			margin-bottom: 35px;
+
+			ul {
+				margin-top: 7px;
+			}
 		}
 
 	} // &__submenu
@@ -1069,6 +1110,8 @@ a {
 		&__between {
 			display: inline-block;
 			margin: 0 -8px;
+			position: relative;
+			top: 2px;
 		}
 
 		&__group {
@@ -1156,6 +1199,7 @@ a {
 				text-overflow: ellipsis;
 				border-bottom: 2px dotted #7fa5c6;
 				line-height: 50px;
+				margin-top: 3px;
 
 				@media all and (max-width: @max-width) {
 					line-height: 40px;
@@ -1330,6 +1374,43 @@ a {
 
 	} // &__check
 
+	&__readonly {
+		display: inline-block;
+		vertical-align: middle;
+		height: 59px;
+		padding: 0 20px 0 5px;
+		border: 1px solid #d5d5d5;
+		color: @color-blue;
+		font-weight: 300;
+		outline: 0;
+		position: relative;
+		line-height: 59px;
+		.noselect;
+
+		@media all and (max-width: @max-width) {
+			height: 49px;
+			line-height: 45px;
+		}
+
+		&__label {
+			display: inline-block;
+			vertical-align: 0;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			border-bottom: 2px dotted transparent;
+			line-height: 50px;
+			margin-top: 3px;
+
+			@media all and (max-width: @max-width) {
+				height: 40px;
+				line-height: 40px;
+			}
+
+		}
+
+	}
+
 	&__spinner {
 		display: inline-block;
 		vertical-align: middle;
@@ -1356,6 +1437,7 @@ a {
 			text-overflow: ellipsis;
 			border-bottom: 2px dotted #7fa5c6;
 			line-height: 50px;
+			margin-top: 3px;
 
 			@media all and (max-width: @max-width) {
 				height: 40px;
@@ -1487,6 +1569,383 @@ a {
 	}
 
 } // .b-calc
+
+.b-tires-hidden {
+	@media all and (max-width: @mq-small) {
+		display: none;
+
+		&.visible {
+			display: block;
+		}
+	}
+}
+
+.b-tires-calc-text {
+	color: #727272;
+	margin-bottom: 16px;
+
+	@media all and (max-width: @mq-small) {
+		display: none;
+	}
+}
+
+.b-tires-calc {
+	background: #fff;
+	border: 1px solid #c2c2c2;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, .07);
+	padding: 20px 30px 25px 20px;
+	position: relative;
+
+	@media all and (max-width: @mq-small) {
+		box-shadow: none;
+		padding: 12px 15px;
+		margin: 0 -15px;
+	}
+
+	&:after {
+		.blocky;.clear;
+	}
+
+	&__heading {
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+
+		@media all and (max-width: @mq-small) {
+			font-size: 14px;
+		}
+
+		&--inline {
+			@media all and (max-width: @mq-small) {
+				display: inline-block;
+				margin-right: 4px;
+				margin-bottom: 13px;
+			}
+		}
+	}
+
+	&__left {
+		float: left;
+
+		@media all and (max-width: @mq-small) {
+			float: none;
+			margin-bottom: 57px;
+			position: relative;
+		}
+
+		&:after {
+			.blocky;
+			width: 16px;
+			height: 16px;
+			border: solid @color-blue;
+			border-width: 0 3px 3px 0;
+			position: relative;
+			margin-right: 12px;
+			.rotate-it(-45deg);
+			position: absolute;
+			top: 97px;
+			left: 50%;
+			margin-left: -8px;
+
+			@media all and (max-width: @mq-small) {
+				top: 100%;
+				margin-top: 20px;
+				left: 142px;
+				margin-left: -16px;
+				.rotate-it(45deg);
+			}
+		}
+
+	}
+
+	&__right {
+		float: right;
+
+		@media all and (max-width: @mq-small) {
+			float: none;
+		}
+	}
+
+	&__bottom {
+		clear: both;
+	}
+
+	&__speed {
+		display: inline-block;
+		font-size: 24px;
+		margin-top: 13px;
+		padding-right: 20px;
+
+		@media all and (max-width: @mq-small) {
+			font-size: 14px;
+		}
+
+		span {
+			font-size: 36px;
+			font-weight: 300;
+			color: @color-blue;
+
+			@media all and (max-width: @mq-small) {
+				font-size: 24px;
+			}
+		}
+	}
+
+	&__scale {
+		float: right;
+		display: block;
+		width: 626px;
+		height: 28px;
+		background: #efefef;
+		border-bottom: 1px solid #cfcfcf;
+		position: relative;
+		margin-bottom: 35px;
+		margin-top: 10px;
+
+		@media all and (max-width: @mq-small) {
+			float: none;
+			width: 280px;
+		}
+
+		&:before {
+			.blocky;
+			width: 11px;
+			height: 28px;
+			background: #fff;
+			position: absolute;
+			left: -11px;
+			bottom: 0;
+			z-index: 1;
+		}
+
+		&:after {
+			.blocky;
+			width: 11px;
+			height: 28px;
+			background: #fff;
+			position: absolute;
+			right: -11px;
+			bottom: 0;
+			z-index: 1;
+		}
+
+		&__over {
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: 28px solid #fff;
+			border-right: 626px solid transparent;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+
+			@media all and (max-width: @mq-small) {
+				border-right-width: 280px;
+			}
+		}
+
+		&__arrow {
+			width: 52px;
+			height: 67px;
+			background: url('@{img-path}/calc-arrow.png');
+			opacity: 0.5;
+			position: absolute;
+			bottom: -19px;
+			left: 0;
+			margin-left: -26px;
+			z-index: 2;
+		}
+
+		&__track {
+			// .gradient(90deg, #002c52 25%, #6b97bd 25%);
+			// background-size: 4px;
+			background: url('@{img-path}/track.png');
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			&:before {
+				.blocky;
+				width: 0;
+				height: 0;
+				border: 11px solid transparent;
+				border-bottom: 0;
+				border-top: 15px solid #efefef;
+				position: absolute;
+				bottom: 0;
+				right: -11px;
+			}
+
+			&:after {
+				.blocky;
+				width: 22px;
+				height: 22px - 9px;
+				background: #efefef;
+				position: absolute;
+				bottom: 15px;
+				right: -11px;
+			}
+		}
+
+		ul {
+			width: 100%;
+			text-align: justify;
+			position: absolute;
+			left: 0;
+			bottom: -31px;
+			line-height: 0;
+
+			&:after {
+				.inline-blocky;
+				width: 100%;
+			}
+
+			li {
+				display: inline-block;
+				font-style: normal;
+				font-size: 12px;
+				color: #bcbcbc;
+
+				@media all and (max-width: @mq-small) {
+					&:nth-child(2n) {
+						display: none;
+					}
+				}
+			}
+		}
+
+	} // &__scale
+
+	&__example {
+		line-height: 28px;
+		color: #b2b2b2;
+		position: relative;
+		padding-right: 50%;
+
+		@media all and (max-width: @mq-small) {
+			line-height: 20px;
+			padding-right: 0;
+		}
+	}
+
+	&__actions {
+		float: right;
+		padding-right: 15px;
+		position: absolute;
+		right: 0;
+		bottom: 7px;
+
+		@media all and (max-width: @mq-small) {
+			float: none;
+			position: static;
+			margin-top: 20px;
+		}
+	}
+
+	&__clear {
+		color: @color-blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.b-form__submit {
+		display: inline-block;
+		margin-right: 30px;
+	}
+
+	.b-tires-table {
+		width: 342px;
+		margin-bottom: 0;
+
+		@media all and (max-width: @max-width) {
+			width: 272px;
+		}
+
+		@media all and (max-width: @mq-small) {
+			width: 100%;
+		}
+
+		th {
+			padding-top: 0;
+		}
+	}
+
+} // .b-tires-calc
+
+.b-tires-table {
+	width: 100%;
+	margin-top: 4px;
+	letter-spacing: @letter-spacing-plus;
+	margin-bottom: 54px;
+
+	@media all and (max-width: @mq-small) {
+		font-size: 12px;
+	}
+
+	th {
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		border-bottom: 1px solid #7fa5c6;
+		padding: 14px 0;
+
+		@media all and (max-width: @mq-small) {
+			font-size: 14px;
+		}
+
+		&:first-child {
+			text-align: left;
+		}
+
+		&:nth-child(4) {
+			text-align: right;
+		}
+
+		@media all and (max-width: @mq-small) {
+			&:nth-child(2), &:nth-child(3) {
+				display: none;
+			}
+
+			&:last-child {
+				display: table-cell;
+			}
+		}
+	}
+
+	td {
+		text-align: center;
+		border-bottom: 1px solid #f0f0f0;
+		padding: 10px 0;
+
+		&:first-child {
+			text-align: left;
+		}
+
+		&:nth-child(4) {
+			text-align: right;
+			color: @color-blue;
+		}
+
+		@media all and (max-width: @mq-small) {
+			&:nth-child(2), &:nth-child(3) {
+				display: none;
+			}
+
+			&:last-child {
+				display: table-cell;
+			}
+		}
+	}
+
+	.unit {
+		color: #adadad;
+	}
+
+} // .b-tires-table
 
 // Slider
 .b-slider {
@@ -1700,6 +2159,68 @@ a {
 		}
 	}
 
+	&--toggle {
+		position: relative;
+
+		@media all and (max-width: @mq-small) {
+			border: 1px solid #c2c2c2;
+			padding: 16px 15px;
+			padding-right: 50px;
+			margin: -1px -15px;
+			cursor: pointer;
+		}
+
+		.icon-down-open {
+			font-size: 20px;
+			color: @color-blue;
+			position: absolute;
+			top: 50%;
+			margin-top: -10px;
+			right: 23px;
+			display: none;
+
+			@media all and (max-width: @mq-small) {
+				display: block;
+			}
+		}
+
+		&.active {
+			.icon-down-open {
+				&:before {
+					content: '\e876';
+				}
+			}
+		}
+	}
+
+	&--hidden {
+		@media all and (max-width: @mq-small) {
+			.animate-hidden;
+			height: 0;
+		}
+	}
+
+	&--visible {
+		display: none;
+
+		@media all and (max-width: @mq-small) {
+			display: block;
+		}
+	}
+
+	&__note {
+		font-size: 12px;
+		color: #8c8c8c;
+		text-transform: none;
+		font-weight: 400;
+		margin-top: 10px;
+		display: none;
+
+		@media all and (max-width: @mq-small) {
+			display: block;
+		}
+	}
+
 	&__controls {
 		display: inline-block;
 		margin-left: 5px;
@@ -1744,6 +2265,32 @@ a {
 			&--active {
 				background: @color-blue;
 			}
+		}
+	}
+
+	&__arrow {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border: solid @color-blue;
+		border-width: 0 3px 3px 0;
+		position: relative;
+		margin-right: 12px;
+
+		@media all and (max-width: @mq-small) {
+			display: none;
+		}
+
+		&:before {
+			.blocky;
+			width: 27px;
+			height: 3px;
+			background: @color-blue;
+			position: absolute;
+			bottom: -3px;
+			right: -1px;
+			.rotate-it(45deg);
+			.transform-origin(100% 100%)
 		}
 	}
 
@@ -3093,6 +3640,15 @@ a {
 		line-height: 26px;
 	}
 
+	&--calc {
+		line-height: 24px;
+		margin-top: 34px;
+
+		@media all and (max-width: @mq-small ) {
+			margin-top: 14px;
+		}
+	}
+
 } // .b-article
 
 .b-service {
@@ -4318,6 +4874,12 @@ a {
 
 	+ .b-heading {
 		margin-top: 20px;
+
+		@media all and (max-width: @mq-small) {
+			&--hidden {
+				margin-top: 0;
+			}
+		}
 	}
 
 } // .b-breadcrumbs

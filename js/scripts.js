@@ -9,10 +9,20 @@ $(document).ready(function(){
 	var bFooter = $('.b-footer');
 	var bPage = $('.l-page');
 
-	if ( html.hasClass('no-flexboxlegacy') ) {
-		bFooter.addClass('b-footer--sticky-old');
-		bPage.css('padding-bottom', bFooter.outerHeight(true))
+	function stickyFooter() {
+		if ( html.hasClass('no-flexboxlegacy') ) {
+			bFooter.addClass('b-footer--sticky-old');
+			bPage.css('padding-bottom', bFooter.outerHeight(true))
+		}
 	}
+
+	stickyFooter();
+
+	var resizeTimer;
+	$(window).resize(function() {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(stickyFooter, 100);
+	});
 
 	var mqMobileWidth = '767px';
 	// Modernizr.mq('(max-width: 767px)');
@@ -286,5 +296,16 @@ $(document).ready(function(){
 
 		thisSpinner.find('.js-calc-spinner__field').text(currentVal)
 	});
+
+	// speedometer
+	var bSpeed = $('.js-calc-speed'),
+	bArrow = $('.js-calc-arrow'),
+	bTrack = $('.js-calc-track');
+	var bSpeedVal = ( bSpeed.data('speed')/200 )*100;
+
+	if ( bSpeed.length ) {
+		bArrow.css( 'left', bSpeedVal + '%' )
+		bTrack.css( 'width', bSpeedVal + '%' )
+	}
 
 });
