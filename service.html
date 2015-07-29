@@ -335,258 +335,263 @@
 
 		</header><!-- .b-header -->
 
-		<div class="l-container l-container--content l-container--notwide">
+		<main class="l-main">
 
-			<div class="b-breadcrumbs">
+			<div class="l-container l-container--content l-container--notwide">
 
-				<ul>
-					<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="b-breadcrumbs__item">Шиномонтаж</li>
-				</ul>
+				<div class="b-breadcrumbs">
 
-			</div><!-- .b-breadcrumbs -->
+					<ul>
+						<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
+						<li class="b-breadcrumbs__item">Шиномонтаж</li>
+					</ul>
 
-			<h1 class="b-heading b-heading--h2">Шиномонтаж</h1>
+				</div><!-- .b-breadcrumbs -->
+
+				<h1 class="b-heading b-heading--h2">Шиномонтаж</h1>
 
 
-			<div class="b-service">
+				<div class="b-service">
 
-				<div class="clearfix">
+					<div class="clearfix">
 
-					<div class="b-service__cell">
+						<div class="b-service__cell">
 
-						<h3 class="b-service__heading">Расчет стоимости <br><br></h3>
+							<h3 class="b-service__heading">Расчет стоимости <br><br></h3>
 
-						<div class="b-service__calc">
+							<div class="b-service__calc">
 
-							<div class="b-calc__select">
-								<span class="b-calc__select__param">
-									<span class="b-calc__select__param__title">Ширина:</span>
+								<div class="b-calc__select">
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Ширина:</span>
 
-									<select>
-										<option value="13">13</option>
-										<option value="14">14</option>
-										<option value="15">15</option>
-										<option value="16">16</option>
-									</select>
-								</span>
-								<span class="b-calc__select__between">/</span>
-								<span class="b-calc__select__param">
-									<span class="b-calc__select__param__title">Профиль:</span>
-
-									<select>
-										<option value="295">295</option>
-										<option value="296">296</option>
-										<option value="297">297</option>
-										<option value="298">298</option>
-									</select>
-								</span>
-								<span class="b-calc__select__between">R</span>
-								<span class="b-calc__select__param b-calc__select__param--push">
-									<span class="b-calc__select__param__title">Диаметр:</span>
-
-									<select>
-										<option value="13">13</option>
-										<option value="14">14</option>
-										<option value="15">15</option>
-										<option value="16">16</option>
-									</select>
-								</span>
-
-								<span class="b-calc__select__param">
-									<span class="b-calc__select__param__title">Количество:</span>
-
-									<span class="b-calc__spinner" data-trigger="spinner">
-										<input class="b-calc__spinner__field ignore" type="text" value="10" data-rule="quantity" data-max="99">
-										<a class="b-calc__spinner__control b-calc__spinner__control--up" href="javascript:;" data-spin="up"></a>
-										<a class="b-calc__spinner__control b-calc__spinner__control--down" href="javascript:;" data-spin="down"></a>
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
 									</span>
-								</span>
+									<span class="b-calc__select__between">/</span>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Профиль:</span>
 
-							</div><!-- .b-calc__select -->
+										<select>
+											<option value="295">295</option>
+											<option value="296">296</option>
+											<option value="297">297</option>
+											<option value="298">298</option>
+										</select>
+									</span>
+									<span class="b-calc__select__between">R</span>
+									<span class="b-calc__select__param b-calc__select__param--push">
+										<span class="b-calc__select__param__title">Диаметр:</span>
 
-							<div class="b-calc__check">
+										<select>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</span>
 
-								<button class="b-form__submit" type="button">Рассчитать</button>
-								<a class="b-service__clear" href="#">Очистить</a>
+									<span class="b-calc__select__param">
+										<span class="b-calc__select__param__title">Количество:</span>
 
-							</div><!-- .b-calc__check -->
+										<span class="b-calc__spinner js-calc-spinner" data-trigger="spinner">
+											<span class="b-calc__spinner__field js-calc-spinner__field"></span>
+											<input type="hidden" value="1" data-spin="spinner" data-rule="quantity" data-max="99">
+											<a class="b-calc__spinner__control b-calc__spinner__control--up" href="javascript:;" data-spin="up"></a>
+											<a class="b-calc__spinner__control b-calc__spinner__control--down" href="javascript:;" data-spin="down"></a>
+										</span>
+									</span>
 
-						</div><!-- .b-service__calc -->
+								</div><!-- .b-calc__select -->
 
-					</div><!-- .b-service__cell -->
+								<div class="b-calc__check">
 
-					<div class="b-service__cell">
+									<button class="b-form__submit" type="button">Рассчитать</button>
+									<a class="b-service__clear" href="#">Очистить</a>
 
-						<h3 class="b-service__heading">
-							Перечень услуг, <br>
-							включенных в стоимость
-						</h3>
+								</div><!-- .b-calc__check -->
 
-						<div class="b-service__options">
+							</div><!-- .b-service__calc -->
 
-							<input type="checkbox" id="service-1" checked>
-							<label class="b-service__check" for="service-1">Снятие / установка колеса</label>
+						</div><!-- .b-service__cell -->
 
-							<input type="checkbox" id="service-2" checked>
-							<label class="b-service__check" for="service-2">Демонтаж</label>
+						<div class="b-service__cell">
 
-							<input type="checkbox" id="service-3" checked>
-							<label class="b-service__check" for="service-3">Монтаж</label>
+							<h3 class="b-service__heading">
+								Перечень услуг, <br>
+								включенных в стоимость
+							</h3>
 
-							<input type="checkbox" id="service-4" checked>
-							<label class="b-service__check" for="service-4">Балансировка</label>
+							<div class="b-service__options">
 
-							<input type="checkbox" id="service-5" checked>
-							<label class="b-service__check" for="service-5">Упаковка шин в пакеты</label>
+								<input type="checkbox" id="service-1" checked>
+								<label class="b-service__check" for="service-1">Снятие / установка колеса</label>
 
-						</div><!-- .b-service__options -->
+								<input type="checkbox" id="service-2" checked>
+								<label class="b-service__check" for="service-2">Демонтаж</label>
 
-					</div><!-- .b-service__cell -->
+								<input type="checkbox" id="service-3" checked>
+								<label class="b-service__check" for="service-3">Монтаж</label>
 
-				</div><!-- .clearfix -->
+								<input type="checkbox" id="service-4" checked>
+								<label class="b-service__check" for="service-4">Балансировка</label>
 
-				<div class="b-service__price">
-					Итого: <strong>9 300 ₽</strong>
-				</div><!-- .b-service__price -->
+								<input type="checkbox" id="service-5" checked>
+								<label class="b-service__check" for="service-5">Упаковка шин в пакеты</label>
 
-				<div class="b-service__submit">
+							</div><!-- .b-service__options -->
 
-					<button class="b-calc__submit" type="button">
-						Записаться прямо сейчас
+						</div><!-- .b-service__cell -->
 
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="10" height="37">
-							<polygon points="0,0 9,19 0,37"/>
-						</svg>
-					</button>
+					</div><!-- .clearfix -->
 
-				</div><!-- .b-service__submit -->
+					<div class="b-service__price">
+						Итого: <strong>9 300 ₽</strong>
+					</div><!-- .b-service__price -->
 
-			</div><!-- .b-service -->
+					<div class="b-service__submit">
 
-			<div class="l-row b-article">
+						<button class="b-calc__submit" type="button">
+							Записаться прямо сейчас
 
-				<div class="l-row__full">
-					<h2 class="b-heading b-heading--h2">Надежные шины в хабаровске по самым доступным ценам</h2>
-				</div>
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="10" height="37">
+								<polygon points="0,0 9,19 0,37"/>
+							</svg>
+						</button>
 
-				<div class="l-row__half">
+					</div><!-- .b-service__submit -->
 
-					<strong>Шиномонтаж и балансировка от шинного центра Джип Тайрс:</strong>
+				</div><!-- .b-service -->
 
+				<div class="l-row b-article">
+
+					<div class="l-row__full">
+						<h2 class="b-heading b-heading--h2">Надежные шины в хабаровске по самым доступным ценам</h2>
+					</div>
+
+					<div class="l-row__half">
+
+						<strong>Шиномонтаж и балансировка от шинного центра Джип Тайрс:</strong>
+
+						<ul>
+							<li>теплый бокс, современное оборудование,</li>
+							<li>только новые расходные материалы (грузики, монтажная паста, соски и т.д.),</li>
+							<li>опытные мастера,</li>
+							<li>хранение шин до следующего сезона,</li>
+							<li>бесплатная упаковка шин в пакеты,</li>
+							<li>продажа новых автошин и дисков,</li>
+							<li>утилизация старых шин</li>
+						</ul>
+
+					</div><!-- .l-row__half -->
+
+					<div class="l-row__half">
+
+						<strong>Шиномонтаж и балансировка от шинного центра Джип Тайрс:</strong>
+
+						<ul>
+							<li>легковые шины R13-R15: 750р.</li>
+							<li>легковые шины R16-R19: 950р.</li>
+							<li>джиповские шины R15-R17: 1400р.</li>
+							<li>джиповские шины R18-R22: 1800р.</li>
+							<li>грязевые шины размером от 235/75 R15 (30/9,5 R15) до 265/75 R16 (31/10,5 R15): 2000р.</li>
+							<li>грязевые шины размером от 285/75 R16 (33/12,5 R15) до 315/75 R16 (35/12,5 R15): 2500р.</li>
+						</ul>
+
+					</div><!-- .l-row__half -->
+
+					<div class="l-row__full">
+						<span class="b-article__blue">
+							Примечание: + 20% к стоимости при монтаже шин с профилем 50% и менее. <br>
+							Запись: по тел. 62-88-00 или на сайте <a href="#"><u>шиномонтаж27.рф</u></a>
+						</span>
+					</div><!-- .l-row-full -->
+
+				</div><!-- .l-row -->
+
+			</div><!-- .l-container -->
+
+		</main><!-- .l-main -->
+
+		<footer class="b-footer">
+
+			<div class="l-container">
+
+				<div class="b-footer__nav">
 					<ul>
-						<li>теплый бокс, современное оборудование,</li>
-						<li>только новые расходные материалы (грузики, монтажная паста, соски и т.д.),</li>
-						<li>опытные мастера,</li>
-						<li>хранение шин до следующего сезона,</li>
-						<li>бесплатная упаковка шин в пакеты,</li>
-						<li>продажа новых автошин и дисков,</li>
-						<li>утилизация старых шин</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Бренды</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Доставка и оплата</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Гарантии</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Скидки</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>О нас</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Новости компании</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Контакты</u></a>
+						</li>
 					</ul>
+				</div><!-- .b-footer__nav -->
 
-				</div><!-- .l-row__half -->
-
-				<div class="l-row__half">
-
-					<strong>Шиномонтаж и балансировка от шинного центра Джип Тайрс:</strong>
-
+				<div class="b-footer__menu">
 					<ul>
-						<li>легковые шины R13-R15: 750р.</li>
-						<li>легковые шины R16-R19: 950р.</li>
-						<li>джиповские шины R15-R17: 1400р.</li>
-						<li>джиповские шины R18-R22: 1800р.</li>
-						<li>грязевые шины размером от 235/75 R15 (30/9,5 R15) до 265/75 R16 (31/10,5 R15): 2000р.</li>
-						<li>грязевые шины размером от 285/75 R16 (33/12,5 R15) до 315/75 R16 (35/12,5 R15): 2500р.</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Каталог автошин</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Каталог дисков</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Шиномонтаж</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Шинный калькулятор</a>
+						</li>
 					</ul>
+				</div><!-- .b-footer__menu -->
 
-				</div><!-- .l-row__half -->
+				<div class="b-footer__phone">
 
-				<div class="l-row__full">
-					<span class="b-article__blue">
-						Примечание: + 20% к стоимости при монтаже шин с профилем 50% и менее. <br>
-						Запись: по тел. 62-88-00 или на сайте <a href="#"><u>шиномонтаж27.рф</u></a>
-					</span>
-				</div><!-- .l-row-full -->
+					<div class="b-footer__phone__number">
+						+7 (4212) 62-88-00
+					</div>
 
-			</div><!-- .l-row -->
+					<div class="b-footer__copyright">
+						© ИП Фуфаев И.С.
+					</div>
 
-		</div><!-- .l-container -->
+				</div><!-- .b-footer__phone -->
+
+				<div class="b-footer__contacts">
+					г. Хабаровск, ул. Иркутская 6, офис №105 <br>
+					E-mail: <a href="mailto:info@jeeptires.ru">info@jeeptires.ru</a> <br>
+					Skype: Jeeptires
+
+					<div class="b-footer__madeby">
+						<a href="#"><u>Разработка сайта</u></a> — Веб-студия «Факт»
+					</div>
+
+				</div><!-- .b-footer__contacts -->
+				
+			</div><!-- .l-container -->
+
+		</footer><!-- .b-footer -->
 		
 	</div><!-- .l-page -->
-
-	<footer class="b-footer">
-
-		<div class="l-container">
-
-			<div class="b-footer__nav">
-				<ul>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Бренды</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Доставка и оплата</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Гарантии</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Скидки</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>О нас</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Новости компании</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Контакты</u></a>
-					</li>
-				</ul>
-			</div><!-- .b-footer__nav -->
-
-			<div class="b-footer__menu">
-				<ul>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Каталог автошин</a>
-					</li>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Каталог дисков</a>
-					</li>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Шиномонтаж</a>
-					</li>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Шинный калькулятор</a>
-					</li>
-				</ul>
-			</div><!-- .b-footer__menu -->
-
-			<div class="b-footer__phone">
-
-				<div class="b-footer__phone__number">
-					+7 (4212) 62-88-00
-				</div>
-
-				<div class="b-footer__copyright">
-					© ИП Фуфаев И.С.
-				</div>
-
-			</div><!-- .b-footer__phone -->
-
-			<div class="b-footer__contacts">
-				г. Хабаровск, ул. Иркутская 6, офис №105 <br>
-				E-mail: <a href="mailto:info@jeeptires.ru">info@jeeptires.ru</a> <br>
-				Skype: Jeeptires
-
-				<div class="b-footer__madeby">
-					<a href="#"><u>Разработка сайта</u></a> — Веб-студия «Факт»
-				</div>
-
-			</div><!-- .b-footer__contacts -->
-			
-		</div><!-- .l-container -->
-
-	</footer><!-- .b-footer -->
 
 </body>
 

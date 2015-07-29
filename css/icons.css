@@ -9,6 +9,13 @@
 	font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'icons';
+		src: url('../fonts/icons.svg?38890207#icons') format('svg');
+	}
+}
+
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	font-family: "icons";
 	font-style: normal;

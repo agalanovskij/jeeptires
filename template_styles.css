@@ -1,10 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300&subset=latin,latin-ext,cyrillic);
 html {
   height: 100%;
 }
 body {
   font: 14px/20px 'Roboto', Arial, sans-serif;
   color: #1a2639;
+  min-height: 100%;
+  position: relative;
+}
+.flexboxlegacy body {
   height: 100%;
 }
 a u {
@@ -21,6 +25,20 @@ a.js-window-call:hover u {
 }
 a:hover u {
   border-bottom-color: transparent;
+}
+.l-page input {
+  -webkit-appearance: none;
+}
+.flexboxlegacy .l-page {
+  min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flexboxlegacy .l-main {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 .l-container {
   max-width: 1420px;
@@ -659,8 +677,8 @@ a:hover u {
   line-height: normal;
   position: absolute;
   top: 49px;
-  left: 15px;
-  right: 15px;
+  left: 25px;
+  right: 25px;
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.53);
   z-index: -1;
   visibility: hidden;
@@ -799,6 +817,9 @@ a:hover u {
   .b-header__btn {
     display: block;
   }
+}
+.touch .b-header__menu__item--sub:hover {
+  pointer-events: none;
 }
 .b-calc {
   background: #fff;
@@ -1001,7 +1022,7 @@ a:hover u {
 }
 .b-calc__select .sod_select .sod_label {
   display: inline-block;
-  vertical-align: -7px;
+  vertical-align: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1169,12 +1190,18 @@ a:hover u {
 .b-calc__spinner {
   display: inline-block;
   vertical-align: middle;
-  width: 90px;
   height: 59px;
+  padding: 0 32px 0 5px;
   border: 1px solid #d5d5d5;
   color: #004b8e;
+  font-weight: 300;
+  outline: 0;
   position: relative;
   line-height: 59px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media all and (max-width: 1420px) {
   .b-calc__spinner {
@@ -1183,20 +1210,28 @@ a:hover u {
   }
 }
 .b-calc__spinner__field {
-  width: 56px;
-  height: 52px;
-  line-height: 50px;
-  margin-left: 7px;
-  vertical-align: 2px;
-  border: 0;
+  display: inline-block;
+  vertical-align: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   border-bottom: 2px dotted #7fa5c6;
-  cursor: pointer;
+  line-height: 50px;
 }
 @media all and (max-width: 1420px) {
   .b-calc__spinner__field {
     height: 40px;
     line-height: 40px;
   }
+}
+.b-calc__spinner input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: 0;
 }
 .b-calc__spinner__control {
   width: 32px;
@@ -2062,7 +2097,7 @@ a:hover u {
   border-right: 8px solid #005cae;
   position: absolute;
   top: 0;
-  left: -8px;
+  right: 100%;
 }
 .b-btn-back:hover {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.16);
@@ -2658,9 +2693,15 @@ a:hover u {
   border: 1px solid #f1f1f1;
   color: #004b8e;
   padding: 20px 30px;
-  margin: 0 -30px 30px;
+  margin: 0 -25px 30px;
   box-shadow: 0 14px 11px rgba(0, 0, 0, 0.05);
   position: relative;
+}
+@media all and (max-width: 767px) {
+  .b-article blockquote {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 .b-article blockquote:before {
   content: '';
@@ -3876,6 +3917,11 @@ a:hover u {
   margin: 0 -25px 0 -15px;
   overflow: hidden;
 }
+@media all and (max-width: 767px) {
+  .b-search-request__finish {
+    margin-right: -15px;
+  }
+}
 .b-search-request__comment-link {
   float: right;
   color: #004b8e;
@@ -4032,6 +4078,13 @@ a:hover u {
   border-top: 1px solid #e2e2e2;
   overflow: hidden;
   text-align: center;
+}
+.b-footer--sticky-old {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 }
 @media all and (max-width: 767px) {
   .b-footer {

@@ -335,291 +335,295 @@
 
 		</header><!-- .b-header -->
 
-		<div class="l-container l-container--content l-container--notwide">
+		<main class="l-main">
 
-			<div class="b-breadcrumbs">
+			<div class="l-container l-container--content l-container--notwide">
 
-				<ul>
-					<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
-					<li class="b-breadcrumbs__item">Оформление заказа</li>
-				</ul>
+				<div class="b-breadcrumbs">
 
-			</div><!-- .b-breadcrumbs -->
+					<ul>
+						<li class="b-breadcrumbs__item"><a href="#">Главная</a></li>
+						<li class="b-breadcrumbs__item">Оформление заказа</li>
+					</ul>
 
-			<h1 class="b-heading b-heading--h2">Оформление заказа</h1>
+				</div><!-- .b-breadcrumbs -->
 
-			<div class="b-checkout">
+				<h1 class="b-heading b-heading--h2">Оформление заказа</h1>
 
-				<form class="validate-form">
+				<div class="b-checkout">
 
-					<div class="b-checkout__pay-title">
-						Информация о покупателе
+					<form class="validate-form">
+
+						<div class="b-checkout__pay-title">
+							Информация о покупателе
+						</div>
+
+						<div class="b-checkout__pay-group">
+
+							<div class="b-checkout__fields">
+
+								<label class="b-form__label required">
+									<span class="b-form__label__name">Ф.И.О.</span>
+									<input class="b-form__label__field" type="text" required>
+								</label>
+
+								<label class="b-form__label required">
+									<span class="b-form__label__name">E-mail</span>
+									<input class="b-form__label__field" type="email" required>
+								</label>
+
+								<label class="b-form__label required">
+									<span class="b-form__label__name">Телефон</span>
+									<input class="b-form__label__field" type="tel" required>
+								</label>
+
+								<label class="b-form__label">
+									<span class="b-form__label__name">Адрес доставки</span>
+									<input class="b-form__label__field" type="text">
+								</label>
+
+							</div><!-- .b-checkout__fields -->
+
+						</div><!-- .b-checkout__pay-group -->
+
+						<div class="b-checkout__pay-group">
+
+							<div class="b-checkout__pay-heading">Выберите способ получения товара:</div>
+
+							<div class="b-checkout__pay-list">
+								
+								<input type="radio" id="delivery-type-1" name="delivery-type" checked>
+								<label for="delivery-type-1">
+									<div class="b-checkout__pay">
+										<span class="b-checkout__pay__img b-checkout__pay__img--home"></span>
+										<span class="b-checkout__pay__text">
+											<strong>Самовывоз</strong>
+											ул. Иркутская 6, бокс 3/12
+										</span>
+									</div>
+								</label>
+
+								<input type="radio" id="delivery-type-2" name="delivery-type">
+								<label for="delivery-type-2">
+									<div class="b-checkout__pay">
+										<span class="b-checkout__pay__img b-checkout__pay__img--car"></span>
+										<span class="b-checkout__pay__text">
+											<strong>Доставка <br> по Хабаровску</strong>
+											Доставка 0 руб.
+										</span>
+									</div>
+								</label>
+
+								<input type="radio" id="delivery-type-3" name="delivery-type">
+								<label for="delivery-type-3">
+									<div class="b-checkout__pay">
+										<span class="b-checkout__pay__img b-checkout__pay__img--rocket"></span>
+										<span class="b-checkout__pay__text">
+											<strong>Отправка в другой <br> город</strong>
+											Доставка до ТК 0 руб.
+										</span>
+									</div>
+								</label>
+
+							</div>
+
+						</div><!-- .b-checkout__pay-group -->
+
+						<div class="b-checkout__pay-group">
+
+							<div class="b-checkout__pay-heading">Выберите способ оплаты:</div>
+
+							<div class="b-checkout__pay-list">
+								
+								<input type="radio" id="payment-type-1" name="payment-type" checked>
+								<label for="payment-type-1">
+									<div class="b-checkout__pay">
+										<span class="b-checkout__pay__img b-checkout__pay__img--cash"></span>
+										<span class="b-checkout__pay__text">
+											<strong>Оплата наличными <br> и банковскими <br> картами</strong>
+										</span>
+									</div>
+								</label>
+
+								<input type="radio" id="payment-type-2" name="payment-type">
+								<label for="payment-type-2">
+									<div class="b-checkout__pay">
+										<span class="b-checkout__pay__img b-checkout__pay__img--bill"></span>
+										<span class="b-checkout__pay__text">
+											<strong>Оплата по счету</strong>
+										</span>
+									</div>
+								</label>
+
+								<input type="radio" id="payment-type-3" name="payment-type">
+								<label for="payment-type-3">
+									<div class="b-checkout__pay">
+										<span class="b-checkout__pay__img b-checkout__pay__img--sber"></span>
+										<span class="b-checkout__pay__text">
+											<strong>Перевод на карту <br> сбербанка</strong>
+										</span>
+									</div>
+								</label>
+
+							</div>
+
+						</div><!-- .b-checkout__pay-group -->
+
+						<div class="b-cart__table b-cart__table--checkout">
+
+							<div class="b-cart__row">
+								<div class="b-cart__cell b-cart__cell--top">Товар</div>
+								<div class="b-cart__cell b-cart__cell--top">Цена</div>
+								<div class="b-cart__cell b-cart__cell--top">Количество</div>
+								<div class="b-cart__cell b-cart__cell--top">Сумма</div>
+								<div class="b-cart__cell b-cart__cell--top"></div>
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+
+								<div class="b-cart__cell">4</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+
+								<div class="b-cart__cell"></div>
+
+							</div><!-- .b-cart__row -->
+
+							<div class="b-cart__row">
+
+								<div class="b-cart__cell">
+									<div class="b-cart__title">
+										<a href="#">
+											<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
+								</div>
+								
+								<div class="b-cart__cell">4</div>
+
+								<div class="b-cart__cell">
+									<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
+								</div>
+
+								<div class="b-cart__cell"></div>
+
+							</div><!-- .b-cart__row -->
+
+						</div><!-- .b-cart__table -->
+
+						<div class="b-checkout__finish">
+
+							<a class="b-checkout__comment-link" href="#"><u>Добавить комментарий к заказу</u></a>
+							
+							<span class="b-checkout__total">
+								Итого: <strong>51 403 ₽</strong>
+							</span>
+
+							<button class="b-form__submit" type="button">Завершить оформление</button>
+
+						</div><!-- .b-checkout__finish -->
+
+					</form>
+
+				</div><!-- .b-checkout -->
+
+			</div><!-- .l-container -->
+
+		</main><!-- .l-main -->
+
+		<footer class="b-footer">
+
+			<div class="l-container">
+
+				<div class="b-footer__nav">
+					<ul>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Бренды</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Доставка и оплата</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Гарантии</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Скидки</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>О нас</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Новости компании</u></a>
+						</li>
+						<li class="b-footer__nav__item">
+							<a class="b-footer__nav__link" href="#"><u>Контакты</u></a>
+						</li>
+					</ul>
+				</div><!-- .b-footer__nav -->
+
+				<div class="b-footer__menu">
+					<ul>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Каталог автошин</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Каталог дисков</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Шиномонтаж</a>
+						</li>
+						<li class="b-footer__menu__item">
+							<a class="b-footer__menu__link" href="#">Шинный калькулятор</a>
+						</li>
+					</ul>
+				</div><!-- .b-footer__menu -->
+
+				<div class="b-footer__phone">
+
+					<div class="b-footer__phone__number">
+						+7 (4212) 62-88-00
 					</div>
 
-					<div class="b-checkout__pay-group">
+					<div class="b-footer__copyright">
+						© ИП Фуфаев И.С.
+					</div>
 
-						<div class="b-checkout__fields">
+				</div><!-- .b-footer__phone -->
 
-							<label class="b-form__label required">
-								<span class="b-form__label__name">Ф.И.О.</span>
-								<input class="b-form__label__field" type="text" required>
-							</label>
+				<div class="b-footer__contacts">
+					г. Хабаровск, ул. Иркутская 6, офис №105 <br>
+					E-mail: <a href="mailto:info@jeeptires.ru">info@jeeptires.ru</a> <br>
+					Skype: Jeeptires
 
-							<label class="b-form__label required">
-								<span class="b-form__label__name">E-mail</span>
-								<input class="b-form__label__field" type="email" required>
-							</label>
+					<div class="b-footer__madeby">
+						<a href="#"><u>Разработка сайта</u></a> — Веб-студия «Факт»
+					</div>
 
-							<label class="b-form__label required">
-								<span class="b-form__label__name">Телефон</span>
-								<input class="b-form__label__field" type="tel" required>
-							</label>
+				</div><!-- .b-footer__contacts -->
+				
+			</div><!-- .l-container -->
 
-							<label class="b-form__label">
-								<span class="b-form__label__name">Адрес доставки</span>
-								<input class="b-form__label__field" type="text">
-							</label>
-
-						</div><!-- .b-checkout__fields -->
-
-					</div><!-- .b-checkout__pay-group -->
-
-					<div class="b-checkout__pay-group">
-
-						<div class="b-checkout__pay-heading">Выберите способ получения товара:</div>
-
-						<div class="b-checkout__pay-list">
-							
-							<input type="radio" id="delivery-type-1" name="delivery-type" checked>
-							<label for="delivery-type-1">
-								<div class="b-checkout__pay">
-									<span class="b-checkout__pay__img b-checkout__pay__img--home"></span>
-									<span class="b-checkout__pay__text">
-										<strong>Самовывоз</strong>
-										ул. Иркутская 6, бокс 3/12
-									</span>
-								</div>
-							</label>
-
-							<input type="radio" id="delivery-type-2" name="delivery-type">
-							<label for="delivery-type-2">
-								<div class="b-checkout__pay">
-									<span class="b-checkout__pay__img b-checkout__pay__img--car"></span>
-									<span class="b-checkout__pay__text">
-										<strong>Доставка <br> по Хабаровску</strong>
-										Доставка 0 руб.
-									</span>
-								</div>
-							</label>
-
-							<input type="radio" id="delivery-type-3" name="delivery-type">
-							<label for="delivery-type-3">
-								<div class="b-checkout__pay">
-									<span class="b-checkout__pay__img b-checkout__pay__img--rocket"></span>
-									<span class="b-checkout__pay__text">
-										<strong>Отправка в другой <br> город</strong>
-										Доставка до ТК 0 руб.
-									</span>
-								</div>
-							</label>
-
-						</div>
-
-					</div><!-- .b-checkout__pay-group -->
-
-					<div class="b-checkout__pay-group">
-
-						<div class="b-checkout__pay-heading">Выберите способ оплаты:</div>
-
-						<div class="b-checkout__pay-list">
-							
-							<input type="radio" id="payment-type-1" name="payment-type" checked>
-							<label for="payment-type-1">
-								<div class="b-checkout__pay">
-									<span class="b-checkout__pay__img b-checkout__pay__img--cash"></span>
-									<span class="b-checkout__pay__text">
-										<strong>Оплата наличными <br> и банковскими <br> картами</strong>
-									</span>
-								</div>
-							</label>
-
-							<input type="radio" id="payment-type-2" name="payment-type">
-							<label for="payment-type-2">
-								<div class="b-checkout__pay">
-									<span class="b-checkout__pay__img b-checkout__pay__img--bill"></span>
-									<span class="b-checkout__pay__text">
-										<strong>Оплата по счету</strong>
-									</span>
-								</div>
-							</label>
-
-							<input type="radio" id="payment-type-3" name="payment-type">
-							<label for="payment-type-3">
-								<div class="b-checkout__pay">
-									<span class="b-checkout__pay__img b-checkout__pay__img--sber"></span>
-									<span class="b-checkout__pay__text">
-										<strong>Перевод на карту <br> сбербанка</strong>
-									</span>
-								</div>
-							</label>
-
-						</div>
-
-					</div><!-- .b-checkout__pay-group -->
-
-					<div class="b-cart__table b-cart__table--checkout">
-
-						<div class="b-cart__row">
-							<div class="b-cart__cell b-cart__cell--top">Товар</div>
-							<div class="b-cart__cell b-cart__cell--top">Цена</div>
-							<div class="b-cart__cell b-cart__cell--top">Количество</div>
-							<div class="b-cart__cell b-cart__cell--top">Сумма</div>
-							<div class="b-cart__cell b-cart__cell--top"></div>
-						</div><!-- .b-cart__row -->
-
-						<div class="b-cart__row">
-
-							<div class="b-cart__cell">
-								<div class="b-cart__title">
-									<a href="#">
-										<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
-									</a>
-								</div>
-							</div>
-
-							<div class="b-cart__cell">
-								<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
-							</div>
-
-							<div class="b-cart__cell">4</div>
-
-							<div class="b-cart__cell">
-								<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
-							</div>
-
-							<div class="b-cart__cell"></div>
-
-						</div><!-- .b-cart__row -->
-
-						<div class="b-cart__row">
-
-							<div class="b-cart__cell">
-								<div class="b-cart__title">
-									<a href="#">
-										<span><u>ШИНЫ VIATTI Strada Asimmetrico V-130</u></span>
-									</a>
-								</div>
-							</div>
-
-							<div class="b-cart__cell">
-								<div class="b-cart__price b-cart__price--single">2 350 ₽</div>
-							</div>
-							
-							<div class="b-cart__cell">4</div>
-
-							<div class="b-cart__cell">
-								<div class="b-cart__price b-cart__price--total"><strong>9 300 ₽</strong></div>
-							</div>
-
-							<div class="b-cart__cell"></div>
-
-						</div><!-- .b-cart__row -->
-
-					</div><!-- .b-cart__table -->
-
-					<div class="b-checkout__finish">
-
-						<a class="b-checkout__comment-link" href="#"><u>Добавить комментарий к заказу</u></a>
-						
-						<span class="b-checkout__total">
-							Итого: <strong>51 403 ₽</strong>
-						</span>
-
-						<button class="b-form__submit" type="button">Завершить оформление</button>
-
-					</div><!-- .b-checkout__finish -->
-
-				</form>
-
-			</div><!-- .b-checkout -->
-
-		</div><!-- .l-container -->
+		</footer><!-- .b-footer -->
 		
 	</div><!-- .l-page -->
-
-	<footer class="b-footer">
-
-		<div class="l-container">
-
-			<div class="b-footer__nav">
-				<ul>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Бренды</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Доставка и оплата</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Гарантии</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Скидки</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>О нас</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Новости компании</u></a>
-					</li>
-					<li class="b-footer__nav__item">
-						<a class="b-footer__nav__link" href="#"><u>Контакты</u></a>
-					</li>
-				</ul>
-			</div><!-- .b-footer__nav -->
-
-			<div class="b-footer__menu">
-				<ul>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Каталог автошин</a>
-					</li>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Каталог дисков</a>
-					</li>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Шиномонтаж</a>
-					</li>
-					<li class="b-footer__menu__item">
-						<a class="b-footer__menu__link" href="#">Шинный калькулятор</a>
-					</li>
-				</ul>
-			</div><!-- .b-footer__menu -->
-
-			<div class="b-footer__phone">
-
-				<div class="b-footer__phone__number">
-					+7 (4212) 62-88-00
-				</div>
-
-				<div class="b-footer__copyright">
-					© ИП Фуфаев И.С.
-				</div>
-
-			</div><!-- .b-footer__phone -->
-
-			<div class="b-footer__contacts">
-				г. Хабаровск, ул. Иркутская 6, офис №105 <br>
-				E-mail: <a href="mailto:info@jeeptires.ru">info@jeeptires.ru</a> <br>
-				Skype: Jeeptires
-
-				<div class="b-footer__madeby">
-					<a href="#"><u>Разработка сайта</u></a> — Веб-студия «Факт»
-				</div>
-
-			</div><!-- .b-footer__contacts -->
-			
-		</div><!-- .l-container -->
-
-	</footer><!-- .b-footer -->
 
 </body>
 

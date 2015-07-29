@@ -1,12 +1,21 @@
 $(document).ready(function(){
 
+	// fast click on touch devices
+	FastClick.attach(document.body);
+
 	var html = $('html');
+
+	// sticky footer in browsers which don't support flexbox model
+	var bFooter = $('.b-footer');
+	var bPage = $('.l-page');
+
+	if ( html.hasClass('no-flexboxlegacy') ) {
+		bFooter.addClass('b-footer--sticky-old');
+		bPage.css('padding-bottom', bFooter.outerHeight(true))
+	}
 
 	var mqMobileWidth = '767px';
 	// Modernizr.mq('(max-width: 767px)');
-
-	// fast click on touch devices
-	FastClick.attach(document.body);
 
 	// html5 placeholders support
 	$('input, textarea').placeholder();
@@ -244,12 +253,10 @@ $(document).ready(function(){
 
 		if ( html.hasClass('touch') ) {
 			if ( thisItem.hasClass('js-hover') ) {
-				$(this).removeClass('js-hover')
+				thisItem.removeClass('js-hover')
 			} else {
-				$(this).addClass('js-hover').siblings().removeClass('js-hover')
+				thisItem.addClass('js-hover').siblings().removeClass('js-hover')
 			}
-
-			e.preventDefault();
 		}
 	});
 
@@ -264,6 +271,20 @@ $(document).ready(function(){
 				bFiltersContent.removeClass('b-filters__content--auto')
 			}
 		}
+	});
+
+	// spinner
+	var spinner = $('.js-calc-spinner');
+
+	spinner.each(function(){
+		thisSpinner = $(this);
+		currentVal = thisSpinner.find('[data-spin=spinner]').val();
+
+		thisSpinner.spinner('changing', function(e, newVal, oldVal){
+			thisSpinner.find('.js-calc-spinner__field').text(newVal);
+		});
+
+		thisSpinner.find('.js-calc-spinner__field').text(currentVal)
 	});
 
 });
