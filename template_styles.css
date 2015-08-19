@@ -4270,6 +4270,9 @@ a:hover u {
 .b-params__inside__cell:first-child {
   display: none;
 }
+.b-params__inside__cell span {
+  margin-right: 19px;
+}
 @media all and (max-width: 992px) {
   .b-params__inside {
     display: table;
