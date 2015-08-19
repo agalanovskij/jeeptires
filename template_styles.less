@@ -202,7 +202,7 @@ a {
 .l-gray {
 	background: @bg-light;
 	border-bottom: 1px solid #e2e2e2;
-	padding: 22px 0;
+	padding: 15px 0;
 
 	@media all and (max-width: @mq-medium) {
 		padding: 8px 0;
@@ -210,6 +210,10 @@ a {
 
 	&--content {
 		border-top: 1px solid #e2e2e2;
+
+      @media all and (max-width: @mq-small) {
+        padding: 0 0 10px 0;
+      }
 	}
 
 	&--visible {
@@ -1600,6 +1604,7 @@ a {
 		box-shadow: none;
 		padding: 12px 15px;
 		margin: 0 -15px;
+        border-top:none;
 	}
 
 	&:after {
@@ -2808,6 +2813,10 @@ a {
 			font-weight: 500;
 			letter-spacing: 0.016em;
 			margin-bottom: 7px;
+
+          @media all and (max-width: @mq-small) {
+            color: #292929;
+          }
 		}
 
 		&__heading {
@@ -2826,9 +2835,9 @@ a {
 
 		&__info {
 			position: relative;
-			padding-top: 217px;
 			background: url('@{img-path}/sizes.jpg') no-repeat;
 			margin-bottom: 20px;
+          width: 217px;
 
 			@media all and (max-width: @mq-small) {
 
@@ -2838,23 +2847,45 @@ a {
 				background: url('@{img-path}/sizes-inch.jpg') no-repeat;
 
 				.b-aside__sizes__numbers {
-					left: 37px;
+                  left: 49px;
+                  letter-spacing: 0.005em;
+                  top: 4px;
 				}
 			}
 
 			&--disc {
-				background: url('@{img-path}/sizes-disc.jpg') 0 17px no-repeat;
-				padding-top: 217px + 36px;
+				background: url('@{img-path}/sizes-disc.jpg') 0 0px no-repeat;
+
+              .b-aside__sizes__info--inner{
+                padding-top: 225px;
+
+                .b-aside__sizes__numbers{
+                  left: 45px;
+                  top: 6px;
+                }
+              }
 			}
+
+          &--inner{
+            padding-top: 191px;
+
+            @media all and (max-width: @mq-small) {
+              margin-bottom: 16px;
+            }
+
+            @media all and (max-width: @mq-small) {
+              border: 1px solid #EFEFEF;
+            }
+          }
 		}
 
 		&__numbers {
-			font-size: 20px;
-			font-weight: 700;
+			font-size: 19px;
+			font-weight: 500;
 			color: #292929;
 			position: absolute;
-			top: 0;
-			left: 35px;
+			top: 7px;
+			left: 51px;
 			letter-spacing: @letter-spacing-plus;
 		}
 
@@ -2990,14 +3021,38 @@ a {
 	
 	&__group {
 		margin-bottom: 15px;
+      position: relative;
 
 		@media all and (max-width: @mq-small) {
-			width: 180px;
+
 
 			.b-btn {
 				width: 180px;
 			}
 		}
+
+      @media all and (max-width: @mq-small) {
+        padding-top: 15px;
+
+        &:first-child {
+          padding-top: 0;
+          &:before {
+            display: none;
+          }
+        }
+
+        &:before {
+          .blocky;
+          width: 100%;
+          padding: 0 20px;
+          height: 1px;
+          background: #dbdbdb;
+          box-shadow: 0 1px 0 #f8f8f8;
+          position: absolute;
+          top: 0;
+          left: -20px;
+        }
+      }
 
 		&--finish {
 			position: relative;
@@ -3039,6 +3094,7 @@ a {
 		line-height: 30px;
 		margin-bottom: 8px;
 		font-size: 13px;
+      width: 180px;
 		// letter-spacing: @letter-spacing-minus;
 
 		&--short {
@@ -3535,7 +3591,6 @@ a {
 			margin-top: 7px;
 		}
 	}
-
 } // .b-about-video
 
 .b-article {
@@ -4467,6 +4522,7 @@ a {
 	&__notes {
 		border-bottom: 1px solid #f0f0f0;
 		padding-bottom: 18px;
+      margin-top: -8px;
 	}
 
 	&__heading {
@@ -4593,6 +4649,14 @@ a {
 				margin-left: 4px;
 			}
 		}
+
+      @media (max-width: @mq-mobile) {
+        &--size{
+          td:last-child{
+            padding-left: 98px;
+          }
+        }
+      }
 	}
 
 } // .b-detail
@@ -4720,6 +4784,10 @@ a {
 			&:first-child {
 				display: none;
 			}
+
+          span{
+            margin-right: 19px;
+          }
 		}
 
 		@media all and (max-width: @mq-medium) {
@@ -4855,7 +4923,9 @@ a {
 		display: inline-block;
 
 		&:after {
-			content: ' — ';
+			content: ' - ';
+            font-family: "Arial",sans-serif;
+            margin: 0 2px;
 		}
 
 		&:last-child {
@@ -4873,7 +4943,7 @@ a {
 	}
 
 	+ .b-heading {
-		margin-top: 20px;
+		margin-top: 11px;
 
 		@media all and (max-width: @mq-small) {
 			&--hidden {
@@ -5193,7 +5263,7 @@ a {
 // Footer
 .b-footer {
 	padding: 22px 0;
-	margin-top: 48px;
+	margin-top: 23px;
 	background: @bg-light;
 	border-top: 1px solid #e2e2e2;
 	overflow: hidden;
@@ -5209,7 +5279,8 @@ a {
 
 	@media all and (max-width: @mq-small) {
 		text-align: left;
-		padding: 13px 0 22px
+		padding: 13px 0 22px;
+        margin-top:0;
 	}
 
 	&__nav {
@@ -5220,8 +5291,8 @@ a {
 
 		@media all and (max-width: @mq-small) {
 			float: none;
-			display: inline-block;
-			margin-bottom: 18px;
+			/*display: inline-block;*/
+			margin-bottom: 28px;
 			-webkit-column-gap: 22px;
 			-moz-column-gap: 22px;
 			column-gap: 22px;
