@@ -2552,6 +2552,11 @@ a:hover u {
   letter-spacing: 0.016em;
   margin-bottom: 7px;
 }
+@media all and (max-width: 767px) {
+  .b-aside__sizes__title {
+    color: #292929;
+  }
+}
 .b-aside__sizes__heading {
   font-size: 20px;
   color: #292929;
@@ -2697,13 +2702,34 @@ a:hover u {
 }
 .b-filters__group {
   margin-bottom: 15px;
+  position: relative;
+}
+@media all and (max-width: 767px) {
+  .b-filters__group .b-btn {
+    width: 180px;
+  }
 }
 @media all and (max-width: 767px) {
   .b-filters__group {
-    width: 180px;
+    padding-top: 15px;
   }
-  .b-filters__group .b-btn {
-    width: 180px;
+  .b-filters__group:first-child {
+    padding-top: 0;
+  }
+  .b-filters__group:first-child:before {
+    display: none;
+  }
+  .b-filters__group:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    height: 1px;
+    background: #dbdbdb;
+    box-shadow: 0 1px 0 #f8f8f8;
+    position: absolute;
+    top: 0;
+    left: -20px;
   }
 }
 .b-filters__group--finish {
@@ -2742,6 +2768,7 @@ a:hover u {
   line-height: 30px;
   margin-bottom: 8px;
   font-size: 13px;
+  width: 180px;
 }
 .b-filters__select--short .sod_select {
   width: 68px !important;

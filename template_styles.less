@@ -2813,6 +2813,10 @@ a {
 			font-weight: 500;
 			letter-spacing: 0.016em;
 			margin-bottom: 7px;
+
+          @media all and (max-width: @mq-small) {
+            color: #292929;
+          }
 		}
 
 		&__heading {
@@ -2995,14 +2999,38 @@ a {
 	
 	&__group {
 		margin-bottom: 15px;
+      position: relative;
 
 		@media all and (max-width: @mq-small) {
-			width: 180px;
+
 
 			.b-btn {
 				width: 180px;
 			}
 		}
+
+      @media all and (max-width: @mq-small) {
+        padding-top: 15px;
+
+        &:first-child {
+          padding-top: 0;
+          &:before {
+            display: none;
+          }
+        }
+
+        &:before {
+          .blocky;
+          width: 100%;
+          padding: 0 20px;
+          height: 1px;
+          background: #dbdbdb;
+          box-shadow: 0 1px 0 #f8f8f8;
+          position: absolute;
+          top: 0;
+          left: -20px;
+        }
+      }
 
 		&--finish {
 			position: relative;
@@ -3044,6 +3072,7 @@ a {
 		line-height: 30px;
 		margin-bottom: 8px;
 		font-size: 13px;
+      width: 180px;
 		// letter-spacing: @letter-spacing-minus;
 
 		&--short {
