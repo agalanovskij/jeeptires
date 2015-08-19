@@ -167,6 +167,11 @@ a:hover u {
 .l-gray--content {
   border-top: 1px solid #e2e2e2;
 }
+@media all and (max-width: 767px) {
+  .l-gray--content {
+    padding: 0 0 10px 0;
+  }
+}
 .l-gray--visible {
   display: none;
 }
@@ -1444,6 +1449,7 @@ a:hover u {
     box-shadow: none;
     padding: 12px 15px;
     margin: 0 -15px;
+    border-top: none;
   }
 }
 .b-tires-calc:after {

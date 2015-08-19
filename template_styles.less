@@ -210,6 +210,10 @@ a {
 
 	&--content {
 		border-top: 1px solid #e2e2e2;
+
+      @media all and (max-width: @mq-small) {
+        padding: 0 0 10px 0;
+      }
 	}
 
 	&--visible {
@@ -1600,6 +1604,7 @@ a {
 		box-shadow: none;
 		padding: 12px 15px;
 		margin: 0 -15px;
+        border-top:none;
 	}
 
 	&:after {
