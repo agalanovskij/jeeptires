@@ -2835,9 +2835,9 @@ a {
 
 		&__info {
 			position: relative;
-			padding-top: 217px;
 			background: url('@{img-path}/sizes.jpg') no-repeat;
 			margin-bottom: 20px;
+          width: 217px;
 
 			@media all and (max-width: @mq-small) {
 
@@ -2847,23 +2847,45 @@ a {
 				background: url('@{img-path}/sizes-inch.jpg') no-repeat;
 
 				.b-aside__sizes__numbers {
-					left: 37px;
+                  left: 49px;
+                  letter-spacing: 0.005em;
+                  top: 4px;
 				}
 			}
 
 			&--disc {
-				background: url('@{img-path}/sizes-disc.jpg') 0 17px no-repeat;
-				padding-top: 217px + 36px;
+				background: url('@{img-path}/sizes-disc.jpg') 0 0px no-repeat;
+
+              .b-aside__sizes__info--inner{
+                padding-top: 225px;
+
+                .b-aside__sizes__numbers{
+                  left: 45px;
+                  top: 6px;
+                }
+              }
 			}
+
+          &--inner{
+            padding-top: 191px;
+
+            @media all and (max-width: @mq-small) {
+              margin-bottom: 16px;
+            }
+
+            @media all and (max-width: @mq-small) {
+              border: 1px solid #EFEFEF;
+            }
+          }
 		}
 
 		&__numbers {
-			font-size: 20px;
-			font-weight: 700;
+			font-size: 19px;
+			font-weight: 500;
 			color: #292929;
 			position: absolute;
-			top: 0;
-			left: 35px;
+			top: 7px;
+			left: 51px;
 			letter-spacing: @letter-spacing-plus;
 		}
 
