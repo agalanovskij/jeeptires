@@ -4357,7 +4357,9 @@ a:hover u {
   display: inline-block;
 }
 .b-breadcrumbs__item:after {
-  content: ' — ';
+  content: ' - ';
+  font-family: "Arial", sans-serif;
+  margin: 0 2px;
 }
 .b-breadcrumbs__item:last-child:after {
   content: '';
