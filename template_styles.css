@@ -987,6 +987,9 @@ a:hover u {
     line-height: 40px;
   }
 }
+.b-calc__select > span:nth-child(2) {
+  margin: 0 -3px 0 0px;
+}
 .b-calc__select__between {
   display: inline-block;
   margin: 0 -8px;
@@ -3381,6 +3384,7 @@ a:hover u {
   border: 1px solid #c2c2c2;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
   margin-bottom: 24px;
+  margin-top: 11px;
 }
 @media all and (max-width: 992px) {
   .b-service__calc {
@@ -3403,9 +3407,22 @@ a:hover u {
 }
 .b-service__clear {
   color: #004b8e;
+  display: inline;
+  height: 35px;
+  font-size: 17px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  width: 97px;
+  border-color: #e2e2e2;
+  padding: 9px 13px;
+  position: relative;
+  top: 2px;
 }
 .b-service__clear:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  background: #f6f6f6;
 }
 .b-service__options {
   padding-top: 27px;
@@ -3465,6 +3482,9 @@ a:hover u {
 .b-service__price strong {
   font-size: 22px;
   color: #004b8e;
+}
+.b-service__submit button {
+  margin-bottom: 18px;
 }
 .b-cart__tabs {
   border-bottom: 1px solid #f0f0f0;
