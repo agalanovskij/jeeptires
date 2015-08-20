@@ -1431,6 +1431,7 @@ a:hover u {
 .b-tires-calc-text {
   color: #727272;
   margin-bottom: 16px;
+  font-size: 15px;
 }
 @media all and (max-width: 767px) {
   .b-tires-calc-text {
