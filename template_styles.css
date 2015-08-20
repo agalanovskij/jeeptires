@@ -2225,6 +2225,9 @@ a:hover u {
   color: #004b8e;
   margin-left: 14px;
 }
+.b-catalog__sortby__link:hover {
+  color: #FF9600;
+}
 .b-catalog__sortby__link:after {
   content: '';
   display: inline-block;
