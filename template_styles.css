@@ -3651,6 +3651,7 @@ a:hover u {
 }
 .b-cart__action:last-child {
   margin-bottom: 0;
+  border-color: #e2e2e2;
 }
 .b-cart__action--remove {
   border-color: #e2e2e2;
