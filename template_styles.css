@@ -4054,6 +4054,9 @@ a:hover u {
     left: 2px;
   }
 }
+.b-detail__images__nav:hover {
+  opacity: 0.7;
+}
 .b-detail__images__nav:before {
   content: '\e874';
 }
