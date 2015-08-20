@@ -1928,7 +1928,7 @@ a:hover u {
 }
 .b-heading--h2 {
   font-size: 24px;
-  margin: 40px 0 30px;
+  margin: 40px 0 22px;
 }
 @media all and (max-width: 767px) {
   .b-heading--h2 {
@@ -3521,6 +3521,9 @@ a:hover u {
 }
 .b-cart__table--checkout .b-cart__cell:last-child {
   display: none;
+}
+.b-cart__table--checkout .b-cart__cell:nth-child(4) {
+  width: 128px;
 }
 .b-cart__row {
   display: table-row;
