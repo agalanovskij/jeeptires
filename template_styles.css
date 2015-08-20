@@ -3966,7 +3966,7 @@ a:hover u {
 .b-detail {
   border-top: 1px solid #f0f0f0;
   padding-top: 11px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 @media all and (max-width: 767px) {
   .b-detail {
