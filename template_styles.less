@@ -4500,6 +4500,8 @@ a {
 			font-size: 22px;
 			z-index: 1;
 			cursor: pointer;
+            padding:5px;
+            margin-top:-5px;
 
 			@media all and (max-width: @mq-small) {
 				left: 2px;
@@ -4509,9 +4511,13 @@ a {
 				content: '\e874';
 			}
 
+            &--prev {
+                margin-left: -5px;
+            }
+
 			&--next {
 				left: auto;
-				right: 47px;
+				right: 42px;
 
 				@media all and (max-width: @mq-small) {
 					right: 2px;
