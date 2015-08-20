@@ -1374,7 +1374,7 @@ a:hover u {
 }
 .b-calc__submit svg {
   width: 10px;
-  height: 37px;
+  height: 41px;
   position: absolute;
   top: -1px;
   right: -9px;
@@ -3669,6 +3669,10 @@ a:hover u {
 }
 .b-cart__finish .b-calc__submit {
   width: 100%;
+  height: 41px;
+}
+.b-cart__finish .b-calc__submit svg {
+  height: 41px;
 }
 .b-cart__total {
   font-size: 18px;
@@ -4878,7 +4882,7 @@ a:hover u {
 }
 .b-form__submit {
   padding: 0 25px;
-  height: 37px;
+  height: 41px;
   background: #ffeb58;
   border: 1px solid #ffbe06;
   font-size: 14px;
