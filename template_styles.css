@@ -157,7 +157,7 @@ a:hover u {
 .l-gray {
   background: url('img/bg-light.jpg') 50% 0 #f0f0f0;
   border-bottom: 1px solid #e2e2e2;
-  padding: 15px 0;
+  padding: 16px 0 15px;
 }
 @media all and (max-width: 992px) {
   .l-gray {
