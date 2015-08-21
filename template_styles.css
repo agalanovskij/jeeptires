@@ -1943,6 +1943,7 @@ a:hover u {
 .b-heading--detail {
   line-height: 34px;
   padding-right: 105px;
+  text-transform: none;
 }
 @media all and (max-width: 767px) {
   .b-heading--detail {
