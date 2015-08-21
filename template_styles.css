@@ -4239,7 +4239,7 @@ a:hover u {
   width: 100%;
   font-size: 0;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__table {
     display: block;
     padding-top: 10px;
@@ -4251,7 +4251,7 @@ a:hover u {
   -webkit-transition: all 0.12s ease-in-out;
   transition: all 0.12s ease-in-out;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__row {
     display: inline-block;
     vertical-align: top;
@@ -4263,7 +4263,7 @@ a:hover u {
     display: none;
   }
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 767px) {
   .b-params__row {
     width: 100%;
   }
@@ -4274,7 +4274,7 @@ a:hover u {
 .b-params__row:hover:first-child {
   background: transparent;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__row:hover {
     background: transparent;
   }
@@ -4285,7 +4285,7 @@ a:hover u {
   border-bottom: 1px solid #f0f0f0;
   padding: 4px 0;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__cell {
     display: block;
     text-align: left;
@@ -4298,7 +4298,7 @@ a:hover u {
 .b-params__cell:last-child {
   width: 116px;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__cell:last-child {
     width: auto;
     border-top: 1px solid #f0f0f0;
@@ -4313,7 +4313,7 @@ a:hover u {
   color: #6b6b6b;
   padding: 10px 0;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__cell--mobile-hidden {
     display: none;
   }
@@ -4321,18 +4321,18 @@ a:hover u {
 .b-params__cell--mobile-visible {
   display: none;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__cell--mobile-visible {
     display: block;
   }
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__cell--inline {
     display: inline-block;
     margin: 10px 0;
   }
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__cell--border {
     border-bottom: 1px solid #f0f0f0;
   }
@@ -4343,7 +4343,7 @@ a:hover u {
 .b-params__inside__cell span {
   margin-right: 19px;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__inside {
     display: table;
   }
@@ -4369,7 +4369,7 @@ a:hover u {
   width: 50%;
   height: 350px;
 }
-@media all and (max-width: 992px) {
+@media all and (max-width: 767px) {
   .b-params__video {
     width: 100%;
   }

@@ -15,6 +15,7 @@
 @mq-tablet: 1023px;
 @mq-medium: 992px;
 @mq-small: 767px;
+
 @mq-mobile: 600px;
 
 // Colors
@@ -4728,7 +4729,7 @@ a {
 		// 	table-layout: auto;
 		// }
 
-		@media all and (max-width: @mq-medium) {
+		@media all and (max-width: @mq-small) {
 			display: block;
 			padding-top: 10px;
 		}
@@ -4739,7 +4740,7 @@ a {
 		font-size: 14px;
 		.transition;
 
-		@media all and (max-width: @mq-medium) {
+		@media all and (max-width: @mq-small) {
 			display: inline-block;
 			vertical-align: top;
 			width: 50%;
@@ -4751,7 +4752,7 @@ a {
 			}
 		}
 
-		@media all and (max-width: @mq-mobile) {
+		@media all and (max-width: @mq-small) {
 			width: 100%;
 		}
 
@@ -4762,7 +4763,7 @@ a {
 				background: transparent;
 			}
 
-			@media all and (max-width: @mq-medium) {
+			@media all and (max-width: @mq-small) {
 				background: transparent;
 			}
 		}
@@ -4774,7 +4775,7 @@ a {
 		border-bottom: 1px solid #f0f0f0;
 		padding: 4px 0;
 
-		@media all and (max-width: @mq-medium) {
+		@media all and (max-width: @mq-small) {
 			display: block;
 			text-align: left;
 			border-bottom: 0;
@@ -4787,7 +4788,7 @@ a {
 		&:last-child {
 			width: 116px;
 
-			@media all and (max-width: @mq-medium) {
+			@media all and (max-width: @mq-small) {
 				width: auto;
 				border-top: 1px solid #f0f0f0;
 				padding: 7px 0 10px;
@@ -4806,7 +4807,7 @@ a {
 
 		&--mobile-hidden {
 
-			@media all and (max-width: @mq-medium) {
+			@media all and (max-width: @mq-small) {
 				display: none;
 			}
 		}
@@ -4814,20 +4815,20 @@ a {
 		&--mobile-visible {
 			display: none;
 
-			@media all and (max-width: @mq-medium) {
+			@media all and (max-width: @mq-small) {
 				display: block;
 			}
 		}
 
 		&--inline {
-			@media all and (max-width: @mq-medium) {
+			@media all and (max-width: @mq-small) {
 				display: inline-block;
 				margin: 10px 0;
 			}
 		}
 
 		&--border {
-			@media all and (max-width: @mq-medium) {
+			@media all and (max-width: @mq-small) {
 				border-bottom: 1px solid #f0f0f0;
 			}
 		}
@@ -4846,7 +4847,7 @@ a {
           }
 		}
 
-		@media all and (max-width: @mq-medium) {
+		@media all and (max-width: @mq-small) {
 			display: table;
 
 			&__cell {
@@ -4875,7 +4876,7 @@ a {
 		width: 50%;
 		height: 350px;
 
-		@media all and (max-width: @mq-medium) {
+		@media all and (max-width: @mq-small) {
 			width: 100%;
 		}
 	}
