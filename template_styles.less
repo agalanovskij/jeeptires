@@ -5423,7 +5423,10 @@ a {
 			clear: both;
 			text-align: left;
 			padding-top: 34px;
+            float:left;
+            width: 50%;
 		}
+
 
 		&__number {
 			font-size: 26px;
@@ -5438,10 +5441,17 @@ a {
 		color: #6b6b6b;
 
 		@media all and (max-width: @mq-medium) {
-			float: none;
+            float: left;
+            width: 47%;
+            margin-top: 20px;
+            clear: none;
+            text-align: left;
+		}
+        @media  all and (max-width: @mq-small) {
+            float: none;
 			clear: both;
 			text-align: left;
-		}
+        }
 	}
 
 	&__madeby {

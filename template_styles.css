@@ -4831,6 +4831,8 @@ a:hover u {
     clear: both;
     text-align: left;
     padding-top: 34px;
+    float: left;
+    width: 50%;
   }
 }
 .b-footer__phone__number {
@@ -4844,6 +4846,15 @@ a:hover u {
   color: #6b6b6b;
 }
 @media all and (max-width: 992px) {
+  .b-footer__contacts {
+    float: left;
+    width: 47%;
+    margin-top: 20px;
+    clear: none;
+    text-align: left;
+  }
+}
+@media all and (max-width: 767px) {
   .b-footer__contacts {
     float: none;
     clear: both;
