@@ -764,6 +764,10 @@ a:hover u {
   height: 63px;
   left: 2px;
 }
+.b-header__submenu .b-seasons__item a {
+  text-align: center;
+  padding-right: 20px;
+}
 .b-header__submenu .b-brands-list {
   margin-bottom: 35px;
 }
