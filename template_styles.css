@@ -4430,7 +4430,7 @@ a:hover u {
   content: ' X ';
   font-size: 14px;
   color: #c3c3c3;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 .b-params .total:before {
   content: ' = ';
