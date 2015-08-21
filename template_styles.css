@@ -97,6 +97,7 @@ a:hover u {
 }
 .l-container--about {
   max-width: 940px;
+  font-size: 15px;
 }
 @media all and (max-width: 992px) {
   .l-container--about {
