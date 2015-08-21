@@ -3824,19 +3824,23 @@ a {
 				display: block;
 				cursor: pointer;
 				margin-bottom: 17px;
+                margin-left: 22px;
 				.noselect;
 
 				&:before {
 					.inline-blocky;
-					width: 5px;
+					width: 13px;
 					height: 10px;
-					border: solid @color-blue;
+					/*border: solid @color-blue;
 					border-width: 0 2px 2px 0;
 					margin-right: 20px;
-					margin-left: 4px;
+					margin-left: 4px;*/
+                    background-image: url("img/service_check_bg.png");
+                    background-repeat: no-repeat;
 					position: relative;
-					top: -5px;
-					.rotate-it(45deg);
+                    left:-20px;
+					top: -1px;
+					/*.rotate-it(45deg);*/
 					.animate-hidden;
 					.transition;
 				}
