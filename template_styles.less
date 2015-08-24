@@ -1118,14 +1118,24 @@ a {
 		}
 
         >span:nth-child(2) {
-            margin: 0 -3px 0 0px;
+            margin: 0 -1px 0 2px;
+        }
+        >span:nth-child(4) {
+          margin: 0 -1px 0 2px;
+        }
+        >span:nth-child(6) {
+          padding-left:35px;
+          @media all and (max-width: @mq-small) {
+            padding-left:0px;
+          }
         }
 
 		&__between {
 			display: inline-block;
 			margin: 0 -8px;
 			position: relative;
-			top: 2px;
+			top: 6px;
+            font-size:52px;
 		}
 
 		&__group {
@@ -1160,6 +1170,8 @@ a {
 				}
 			}
 
+
+
 			&__title {
 				display: block;
 				vertical-align: top;
@@ -1183,7 +1195,7 @@ a {
 		.sod_select {
 			display: inline-block;
 			vertical-align: middle;
-			height: 59px;
+			height: 59px !important;
 			padding: 0 20px 0 5px;
 			border: 1px solid #d5d5d5;
 			color: @color-blue;
@@ -1191,12 +1203,20 @@ a {
 			outline: 0;
 			cursor: pointer;
 			position: relative;
-			line-height: 59px;
+			line-height: 50px !important;
+            font-size:50px;
+
 
 			@media all and (max-width: @max-width) {
 				height: 49px;
 				line-height: 45px;
 			}
+
+            @media all and (max-width: @mq-mobile) {
+              font-size:40px;
+              height: 40px !important;
+              line-height: 45px !important;
+            }
 
 			&:after {
 				.blocky;
@@ -1224,6 +1244,12 @@ a {
 				@media all and (max-width: @max-width) {
 					line-height: 40px;
 				}
+                @media all and (max-width: @mq-mobile) {
+
+                  height: 40px !important;
+                  position: relative;
+                  top: -8px;
+                }
 			}
 
 			.sod_list_wrapper {
@@ -1435,7 +1461,7 @@ a {
 	&__spinner {
 		display: inline-block;
 		vertical-align: middle;
-		height: 59px;
+		height: 59px !important;
 		padding: 0 32px 0 5px;
 		border: 1px solid #d5d5d5;
 		color: @color-blue;
@@ -1457,8 +1483,10 @@ a {
 			white-space: nowrap;
 			text-overflow: ellipsis;
 			border-bottom: 2px dotted #7fa5c6;
-			line-height: 50px;
+			line-height: 50px !important;
 			margin-top: 3px;
+            font-size:50px;
+            height:50px !important;
 
 			@media all and (max-width: @max-width) {
 				height: 40px;
@@ -3801,14 +3829,14 @@ a {
 		color: @color-blue;
         display: inline;
         height: 35px;
-        font-size: 17px;
+        font-size: 16px;
         line-height: 35px;
         text-align: center;
         letter-spacing: 0.05em;
         border: 1px solid transparent;
         width:97px;
         border-color: #e2e2e2;
-        padding: 9px 13px;
+        padding: 10px 13px;
         position: relative;
         top: 2px;
 
@@ -5700,3 +5728,25 @@ a {
 	} // &.mfp-wrap
 
 } // .mfp-anim
+.b-calc__select .sod_select .sod_label{
+  line-height: 50px !important;
+}
+.b-calc__select__between{
+  @media all and (max-width: @mq-mobile) {
+    top: 2px;
+    font-size: 40px;
+  }
+}
+.b-calc__spinner{
+  @media all and (max-width: @mq-mobile) {
+    height:40px !important;
+  }
+}
+.b-calc__spinner__field{
+  @media all and (max-width: @mq-mobile) {
+    font-size: 40px;
+    height: 40px !important;
+    position:relative;
+    top:-10px;
+  }
+}

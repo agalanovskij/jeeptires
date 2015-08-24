@@ -993,13 +993,25 @@ a:hover u {
   }
 }
 .b-calc__select > span:nth-child(2) {
-  margin: 0 -3px 0 0px;
+  margin: 0 -1px 0 2px;
+}
+.b-calc__select > span:nth-child(4) {
+  margin: 0 -1px 0 2px;
+}
+.b-calc__select > span:nth-child(6) {
+  padding-left: 35px;
+}
+@media all and (max-width: 767px) {
+  .b-calc__select > span:nth-child(6) {
+    padding-left: 0px;
+  }
 }
 .b-calc__select__between {
   display: inline-block;
   margin: 0 -8px;
   position: relative;
-  top: 2px;
+  top: 6px;
+  font-size: 52px;
 }
 .b-calc__select__group {
   display: inline-block;
@@ -1058,7 +1070,7 @@ a:hover u {
 .b-calc__select .sod_select {
   display: inline-block;
   vertical-align: middle;
-  height: 59px;
+  height: 59px !important;
   padding: 0 20px 0 5px;
   border: 1px solid #d5d5d5;
   color: #004b8e;
@@ -1066,12 +1078,20 @@ a:hover u {
   outline: 0;
   cursor: pointer;
   position: relative;
-  line-height: 59px;
+  line-height: 50px !important;
+  font-size: 50px;
 }
 @media all and (max-width: 1420px) {
   .b-calc__select .sod_select {
     height: 49px;
     line-height: 45px;
+  }
+}
+@media all and (max-width: 600px) {
+  .b-calc__select .sod_select {
+    font-size: 40px;
+    height: 40px !important;
+    line-height: 45px !important;
   }
 }
 .b-calc__select .sod_select:after {
@@ -1100,6 +1120,13 @@ a:hover u {
 @media all and (max-width: 1420px) {
   .b-calc__select .sod_select .sod_label {
     line-height: 40px;
+  }
+}
+@media all and (max-width: 600px) {
+  .b-calc__select .sod_select .sod_label {
+    height: 40px !important;
+    position: relative;
+    top: -8px;
   }
 }
 .b-calc__select .sod_select .sod_list_wrapper {
@@ -1297,7 +1324,7 @@ a:hover u {
 .b-calc__spinner {
   display: inline-block;
   vertical-align: middle;
-  height: 59px;
+  height: 59px !important;
   padding: 0 32px 0 5px;
   border: 1px solid #d5d5d5;
   color: #004b8e;
@@ -1323,8 +1350,10 @@ a:hover u {
   white-space: nowrap;
   text-overflow: ellipsis;
   border-bottom: 2px dotted #7fa5c6;
-  line-height: 50px;
+  line-height: 50px !important;
   margin-top: 3px;
+  font-size: 50px;
+  height: 50px !important;
 }
 @media all and (max-width: 1420px) {
   .b-calc__spinner__field {
@@ -3429,14 +3458,14 @@ a:hover u {
   color: #004b8e;
   display: inline;
   height: 35px;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.05em;
   border: 1px solid transparent;
   width: 97px;
   border-color: #e2e2e2;
-  padding: 9px 13px;
+  padding: 10px 13px;
   position: relative;
   top: 2px;
 }
@@ -5081,4 +5110,26 @@ a:hover u {
   -ms-transform: translateY(25px);
   transform: translateY(25px);
   opacity: 0;
+}
+.b-calc__select .sod_select .sod_label {
+  line-height: 50px !important;
+}
+@media all and (max-width: 600px) {
+  .b-calc__select__between {
+    top: 2px;
+    font-size: 40px;
+  }
+}
+@media all and (max-width: 600px) {
+  .b-calc__spinner {
+    height: 40px !important;
+  }
+}
+@media all and (max-width: 600px) {
+  .b-calc__spinner__field {
+    font-size: 40px;
+    height: 40px !important;
+    position: relative;
+    top: -10px;
+  }
 }
