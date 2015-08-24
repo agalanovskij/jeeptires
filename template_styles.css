@@ -1014,6 +1014,16 @@ a:hover u {
     margin-bottom: 0;
   }
 }
+@media all and (max-width: 1230px) {
+  .b-calc__select__group {
+    margin-right: 8px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .b-calc__select__group {
+    margin-right: 13px;
+  }
+}
 .b-calc__select__param {
   display: inline-block;
   line-height: 22px;
@@ -4835,6 +4845,11 @@ a:hover u {
     width: 50%;
   }
 }
+@media all and (max-width: 600px) {
+  .b-footer__phone {
+    width: auto;
+  }
+}
 .b-footer__phone__number {
   font-size: 26px;
   color: #1a2639;
@@ -4859,6 +4874,11 @@ a:hover u {
     float: none;
     clear: both;
     text-align: left;
+  }
+}
+@media all and (max-width: 600px) {
+  .b-footer__contacts {
+    width: auto;
   }
 }
 .b-footer__madeby {

@@ -1140,6 +1140,12 @@ a {
 					margin-bottom: 0;
 				}
 			}
+            @media all and (max-width: 1230px) {
+              margin-right: 8px;
+            }
+            @media all and (max-width: 1200px) {
+              margin-right: 13px;
+            }
 		}
 
 		&__param {
@@ -5427,6 +5433,9 @@ a {
             width: 50%;
 		}
 
+        @media all and (max-width: @mq-mobile) {
+            width:auto;
+        }
 
 		&__number {
 			font-size: 26px;
@@ -5451,6 +5460,10 @@ a {
             float: none;
 			clear: both;
 			text-align: left;
+        }
+
+        @media all and (max-width: @mq-mobile) {
+          width:auto;
         }
 	}
 
